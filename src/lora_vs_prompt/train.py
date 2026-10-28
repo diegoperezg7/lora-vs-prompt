@@ -88,5 +88,9 @@ def train_adapter(name: str, log=print) -> dict:
         "hyperparameters": config.LORA,
         "curves": curves,
     }
-    (out / "training.json").write_text(json.dumps(summary, indent=2, default=float))
+    text = json.dumps(summary, indent=2, default=float)
+    (out / "training.json").write_text(text)
+    # adapters/ is not in git; the copy under results/ keeps curves and timings with the repo.
+    config.TRAINING_DIR.mkdir(parents=True, exist_ok=True)
+    (config.TRAINING_DIR / f"{name}.json").write_text(text)
     return summary

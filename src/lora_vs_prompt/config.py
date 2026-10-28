@@ -11,6 +11,7 @@ LORA_DATA_DIR = ROOT / "data" / "lora"
 PRED_DIR = ROOT / "predictions"
 ADAPTER_DIR = ROOT / "adapters"
 RESULTS_DIR = ROOT / "results"
+TRAINING_DIR = RESULTS_DIR / "training"
 FIGURES_DIR = ROOT / "docs" / "figures"
 EXPORT_DIR = ROOT / "export" / "evalsmith"
 

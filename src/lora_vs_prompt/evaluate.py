@@ -142,7 +142,7 @@ def evaluate_all(splits: dict[str, list[Doc]], names: list[str]) -> dict:
         }
     results["paired"] = paired(splits, names)
     for adapter in config.ADAPTERS:
-        path = config.ADAPTER_DIR / adapter / "training.json"
+        path = config.TRAINING_DIR / f"{adapter}.json"
         if path.exists():
             results["training"][adapter] = json.loads(path.read_text())
     config.RESULTS_DIR.mkdir(parents=True, exist_ok=True)
