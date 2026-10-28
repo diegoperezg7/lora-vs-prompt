@@ -1,0 +1,5651 @@
+{
+  "contenders": {
+    "qwen0.5b-fewshot": {
+      "dev": {
+        "contender": "qwen0.5b-fewshot",
+        "split": "dev",
+        "n": 120,
+        "json_valid": 0.9666666666666667,
+        "category_accuracy": 0.15833333333333333,
+        "macro_f1": 0.14011614401858305,
+        "exact_match": 0.03333333333333333,
+        "field_accuracy": {
+          "vendor": 0.7583333333333333,
+          "date": 0.875,
+          "base": 0.85,
+          "vat": 0.725,
+          "total": 0.9333333333333333,
+          "period_start": 0.36666666666666664,
+          "period_end": 0.36666666666666664,
+          "recharged_to_tenant": 0.8416666666666667
+        },
+        "mean_field_accuracy": 0.7145833333333333,
+        "ci": {
+          "macro_f1": [
+            0.07773233895024781,
+            0.19990122740450883
+          ],
+          "exact_match": [
+            0.008333333333333333,
+            0.06666666666666667
+          ],
+          "json_valid": [
+            0.9333333333333333,
+            0.9916666666666667
+          ],
+          "mean_field_accuracy": [
+            0.6760416666666667,
+            0.753125
+          ]
+        },
+        "latency_p50_s": 2.59045,
+        "latency_p95_s": 2.9699549999999992,
+        "latency_mean_s": 2.5219650000000002,
+        "prompt_tokens_mean": 1635.7833333333333,
+        "gen_tokens_mean": 89.825,
+        "gen_tps_median": 105.55,
+        "retried": 0,
+        "peak_memory_gb": 0.992,
+        "load_seconds": 0.7,
+        "hours_per_1k_docs": 0.7005458333333334,
+        "kwh_per_1k_docs": 0.014010916666666668,
+        "eur_per_1k_docs_local": 0.002521965,
+        "slices": {
+          "clean": {
+            "n": 39,
+            "exact_match": 0.05128205128205128,
+            "category_accuracy": 0.23076923076923078
+          },
+          "distractor_amount": {
+            "n": 18,
+            "exact_match": 0.0,
+            "category_accuracy": 0.05555555555555555
+          },
+          "injection": {
+            "n": 13,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "misleading_vendor": {
+            "n": 1,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "ocr_heavy": {
+            "n": 19,
+            "exact_match": 0.0,
+            "category_accuracy": 0.15789473684210525
+          },
+          "ocr_light": {
+            "n": 30,
+            "exact_match": 0.0,
+            "category_accuracy": 0.06666666666666667
+          },
+          "owner_home": {
+            "n": 3,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 21,
+            "exact_match": 0.047619047619047616,
+            "category_accuracy": 0.23809523809523808
+          },
+          "repair_vs_improvement": {
+            "n": 6,
+            "exact_match": 0.16666666666666666,
+            "category_accuracy": 0.3333333333333333
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.14285714285714285,
+            "category_accuracy": 0.14285714285714285
+          }
+        },
+        "layouts": {
+          "bank": {
+            "n": 24,
+            "exact_match": 0.0,
+            "category_accuracy": 0.16666666666666666
+          },
+          "email": {
+            "n": 32,
+            "exact_match": 0.09375,
+            "category_accuracy": 0.1875
+          },
+          "invoice": {
+            "n": 29,
+            "exact_match": 0.0,
+            "category_accuracy": 0.20689655172413793
+          },
+          "keyvalue": {
+            "n": 16,
+            "exact_match": 0.0625,
+            "category_accuracy": 0.125
+          },
+          "ticket": {
+            "n": 19,
+            "exact_match": 0.0,
+            "category_accuracy": 0.05263157894736842
+          }
+        },
+        "confusion": [
+          [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            12,
+            0,
+            0,
+            0
+          ],
+          [
+            8,
+            0,
+            1,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            1
+          ],
+          [
+            10,
+            0,
+            2,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            12,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            5,
+            0,
+            1,
+            1
+          ],
+          [
+            3,
+            0,
+            1,
+            0,
+            0,
+            0,
+            3,
+            1,
+            5,
+            0
+          ],
+          [
+            10,
+            1,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0
+          ]
+        ],
+        "errors": [
+          "invalid JSON: Expecting property name enclosed in double quotes",
+          "schema: category: Input should be 'repairs_maintenance', 'utilities', 'community_fees', 'property_tax', 'insurance', 'mortgage_interest', 'improvement', 'professional_services' or 'non_deductible'",
+          "schema: vat: Input should be a valid number"
+        ]
+      },
+      "test": {
+        "contender": "qwen0.5b-fewshot",
+        "split": "test",
+        "n": 300,
+        "json_valid": 0.93,
+        "category_accuracy": 0.15666666666666668,
+        "macro_f1": 0.10321508660292888,
+        "exact_match": 0.043333333333333335,
+        "field_accuracy": {
+          "vendor": 0.6233333333333333,
+          "date": 0.7766666666666666,
+          "base": 0.81,
+          "vat": 0.7133333333333334,
+          "total": 0.87,
+          "period_start": 0.4066666666666667,
+          "period_end": 0.4066666666666667,
+          "recharged_to_tenant": 0.8533333333333334
+        },
+        "mean_field_accuracy": 0.6825,
+        "ci": {
+          "macro_f1": [
+            0.07120804737777926,
+            0.13434766215531435
+          ],
+          "exact_match": [
+            0.023333333333333334,
+            0.06666666666666667
+          ],
+          "json_valid": [
+            0.9033333333333333,
+            0.9567499999999995
+          ],
+          "mean_field_accuracy": [
+            0.6570833333333334,
+            0.7079166666666666
+          ]
+        },
+        "latency_p50_s": 2.52765,
+        "latency_p95_s": 3.3942250000000014,
+        "latency_mean_s": 2.4374536666666664,
+        "prompt_tokens_mean": 1626.1433333333334,
+        "gen_tokens_mean": 88.94666666666667,
+        "gen_tps_median": 105.6,
+        "retried": 0,
+        "peak_memory_gb": 0.995,
+        "load_seconds": 0.42,
+        "hours_per_1k_docs": 0.6770704629629629,
+        "kwh_per_1k_docs": 0.013541409259259257,
+        "eur_per_1k_docs_local": 0.0024374536666666663,
+        "slices": {
+          "clean": {
+            "n": 86,
+            "exact_match": 0.03488372093023256,
+            "category_accuracy": 0.11627906976744186
+          },
+          "distractor_amount": {
+            "n": 62,
+            "exact_match": 0.06451612903225806,
+            "category_accuracy": 0.14516129032258066
+          },
+          "injection": {
+            "n": 27,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "misleading_vendor": {
+            "n": 6,
+            "exact_match": 0.3333333333333333,
+            "category_accuracy": 0.6666666666666666
+          },
+          "ocr_heavy": {
+            "n": 37,
+            "exact_match": 0.08108108108108109,
+            "category_accuracy": 0.16216216216216217
+          },
+          "ocr_light": {
+            "n": 82,
+            "exact_match": 0.024390243902439025,
+            "category_accuracy": 0.14634146341463414
+          },
+          "owner_home": {
+            "n": 18,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 39,
+            "exact_match": 0.02564102564102564,
+            "category_accuracy": 0.20512820512820512
+          },
+          "repair_vs_improvement": {
+            "n": 24,
+            "exact_match": 0.20833333333333334,
+            "category_accuracy": 0.5416666666666666
+          },
+          "withholding": {
+            "n": 9,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          }
+        },
+        "layouts": {
+          "columns": {
+            "n": 61,
+            "exact_match": 0.06557377049180328,
+            "category_accuracy": 0.2786885245901639
+          },
+          "dotted": {
+            "n": 78,
+            "exact_match": 0.0641025641025641,
+            "category_accuracy": 0.15384615384615385
+          },
+          "letter": {
+            "n": 84,
+            "exact_match": 0.03571428571428571,
+            "category_accuracy": 0.13095238095238096
+          },
+          "note": {
+            "n": 77,
+            "exact_match": 0.012987012987012988,
+            "category_accuracy": 0.09090909090909091
+          }
+        },
+        "confusion": [
+          [
+            10,
+            0,
+            1,
+            0,
+            1,
+            0,
+            27,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            0,
+            1,
+            0,
+            0,
+            23,
+            0,
+            0,
+            5
+          ],
+          [
+            13,
+            0,
+            5,
+            0,
+            0,
+            0,
+            13,
+            1,
+            0,
+            0
+          ],
+          [
+            18,
+            1,
+            1,
+            4,
+            0,
+            0,
+            5,
+            0,
+            1,
+            3
+          ],
+          [
+            27,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            22,
+            0,
+            0,
+            2,
+            0,
+            0,
+            4,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            27,
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            1,
+            0,
+            0,
+            15,
+            0,
+            4,
+            3
+          ],
+          [
+            7,
+            0,
+            1,
+            1,
+            0,
+            0,
+            34,
+            0,
+            0,
+            4
+          ]
+        ],
+        "errors": [
+          "invalid JSON: Expecting ',' delimiter",
+          "invalid JSON: Expecting property name enclosed in double quotes",
+          "schema: category: Input should be 'repairs_maintenance', 'utilities', 'community_fees', 'property_tax', 'insurance', 'mortgage_interest', 'improvement', 'professional_services' or 'non_deductible'",
+          "schema: vat: Input should be a valid number",
+          "schema: vendor: Input should be a valid string"
+        ]
+      },
+      "hard": {
+        "contender": "qwen0.5b-fewshot",
+        "split": "hard",
+        "n": 200,
+        "json_valid": 0.915,
+        "category_accuracy": 0.115,
+        "macro_f1": 0.057239057239057235,
+        "exact_match": 0.04,
+        "field_accuracy": {
+          "vendor": 0.635,
+          "date": 0.67,
+          "base": 0.705,
+          "vat": 0.6,
+          "total": 0.745,
+          "period_start": 0.38,
+          "period_end": 0.38,
+          "recharged_to_tenant": 0.835
+        },
+        "mean_field_accuracy": 0.61875,
+        "ci": {
+          "macro_f1": [
+            0.037842464385567834,
+            0.07531044653524492
+          ],
+          "exact_match": [
+            0.015,
+            0.07
+          ],
+          "json_valid": [
+            0.875,
+            0.95
+          ],
+          "mean_field_accuracy": [
+            0.58375,
+            0.65125
+          ]
+        },
+        "latency_p50_s": 2.64505,
+        "latency_p95_s": 3.2015149999999997,
+        "latency_mean_s": 2.5463255000000005,
+        "prompt_tokens_mean": 1637.625,
+        "gen_tokens_mean": 94.53,
+        "gen_tps_median": 105.6,
+        "retried": 0,
+        "peak_memory_gb": 0.994,
+        "load_seconds": 1.57,
+        "hours_per_1k_docs": 0.707312638888889,
+        "kwh_per_1k_docs": 0.01414625277777778,
+        "eur_per_1k_docs_local": 0.0025463255,
+        "slices": {
+          "distractor_amount": {
+            "n": 116,
+            "exact_match": 0.04310344827586207,
+            "category_accuracy": 0.12931034482758622
+          },
+          "injection": {
+            "n": 68,
+            "exact_match": 0.014705882352941176,
+            "category_accuracy": 0.04411764705882353
+          },
+          "misleading_vendor": {
+            "n": 5,
+            "exact_match": 0.2,
+            "category_accuracy": 0.8
+          },
+          "ocr_heavy": {
+            "n": 200,
+            "exact_match": 0.04,
+            "category_accuracy": 0.115
+          },
+          "owner_home": {
+            "n": 13,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 46,
+            "exact_match": 0.043478260869565216,
+            "category_accuracy": 0.13043478260869565
+          },
+          "repair_vs_improvement": {
+            "n": 41,
+            "exact_match": 0.1951219512195122,
+            "category_accuracy": 0.4878048780487805
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          }
+        },
+        "layouts": {
+          "csv": {
+            "n": 108,
+            "exact_match": 0.009259259259259259,
+            "category_accuracy": 0.09259259259259259
+          },
+          "scan": {
+            "n": 92,
+            "exact_match": 0.07608695652173914,
+            "category_accuracy": 0.14130434782608695
+          }
+        },
+        "confusion": [
+          [
+            12,
+            1,
+            0,
+            0,
+            0,
+            1,
+            7,
+            1,
+            1,
+            0
+          ],
+          [
+            5,
+            0,
+            1,
+            0,
+            1,
+            0,
+            7,
+            0,
+            3,
+            1
+          ],
+          [
+            11,
+            4,
+            0,
+            2,
+            0,
+            0,
+            3,
+            0,
+            1,
+            0
+          ],
+          [
+            13,
+            1,
+            1,
+            0,
+            0,
+            1,
+            2,
+            0,
+            7,
+            1
+          ],
+          [
+            19,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            18,
+            1,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            3,
+            0
+          ],
+          [
+            7,
+            1,
+            2,
+            2,
+            0,
+            0,
+            11,
+            1,
+            3,
+            0
+          ],
+          [
+            14,
+            0,
+            0,
+            1,
+            0,
+            0,
+            3,
+            0,
+            2,
+            0
+          ],
+          [
+            10,
+            0,
+            0,
+            4,
+            0,
+            0,
+            3,
+            0,
+            0,
+            2
+          ]
+        ],
+        "errors": [
+          "schema: category: Field required",
+          "schema: category: Input should be 'repairs_maintenance', 'utilities', 'community_fees', 'property_tax', 'insurance', 'mortgage_interest', 'improvement', 'professional_services' or 'non_deductible'",
+          "schema: recharged_to_tenant: Field required",
+          "schema: vat: Input should be a valid number",
+          "schema: vendor: Input should be a valid string"
+        ]
+      }
+    },
+    "qwen1.5b-zeroshot": {
+      "dev": {
+        "contender": "qwen1.5b-zeroshot",
+        "split": "dev",
+        "n": 120,
+        "json_valid": 0.375,
+        "category_accuracy": 0.5333333333333333,
+        "macro_f1": 0.5371773108154917,
+        "exact_match": 0.11666666666666667,
+        "field_accuracy": {
+          "vendor": 0.7,
+          "date": 0.6416666666666667,
+          "base": 0.8,
+          "vat": 0.5666666666666667,
+          "total": 0.9083333333333333,
+          "period_start": 0.5666666666666667,
+          "period_end": 0.5333333333333333,
+          "recharged_to_tenant": 0.8666666666666667
+        },
+        "mean_field_accuracy": 0.6979166666666666,
+        "ci": {
+          "macro_f1": [
+            0.4451741056371583,
+            0.6126043190656897
+          ],
+          "exact_match": [
+            0.058333333333333334,
+            0.175
+          ],
+          "json_valid": [
+            0.2916666666666667,
+            0.4666666666666667
+          ],
+          "mean_field_accuracy": [
+            0.6468489583333333,
+            0.7479166666666667
+          ]
+        },
+        "latency_p50_s": 4.95575,
+        "latency_p95_s": 6.555934999999999,
+        "latency_mean_s": 4.9896825,
+        "prompt_tokens_mean": 647.7833333333333,
+        "gen_tokens_mean": 105.50833333333334,
+        "gen_tps_median": 45.349999999999994,
+        "retried": 0,
+        "peak_memory_gb": 1.559,
+        "load_seconds": 0.76,
+        "hours_per_1k_docs": 1.3860229166666667,
+        "kwh_per_1k_docs": 0.027720458333333333,
+        "eur_per_1k_docs_local": 0.004989682499999999,
+        "slices": {
+          "clean": {
+            "n": 39,
+            "exact_match": 0.07692307692307693,
+            "category_accuracy": 0.6410256410256411
+          },
+          "distractor_amount": {
+            "n": 18,
+            "exact_match": 0.0,
+            "category_accuracy": 0.2777777777777778
+          },
+          "injection": {
+            "n": 13,
+            "exact_match": 0.0,
+            "category_accuracy": 0.07692307692307693
+          },
+          "misleading_vendor": {
+            "n": 1,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "ocr_heavy": {
+            "n": 19,
+            "exact_match": 0.21052631578947367,
+            "category_accuracy": 0.47368421052631576
+          },
+          "ocr_light": {
+            "n": 30,
+            "exact_match": 0.13333333333333333,
+            "category_accuracy": 0.6
+          },
+          "owner_home": {
+            "n": 3,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 21,
+            "exact_match": 0.09523809523809523,
+            "category_accuracy": 0.42857142857142855
+          },
+          "repair_vs_improvement": {
+            "n": 6,
+            "exact_match": 0.5,
+            "category_accuracy": 0.5
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.42857142857142855,
+            "category_accuracy": 0.8571428571428571
+          }
+        },
+        "layouts": {
+          "bank": {
+            "n": 24,
+            "exact_match": 0.0,
+            "category_accuracy": 0.6666666666666666
+          },
+          "email": {
+            "n": 32,
+            "exact_match": 0.125,
+            "category_accuracy": 0.53125
+          },
+          "invoice": {
+            "n": 29,
+            "exact_match": 0.10344827586206896,
+            "category_accuracy": 0.5172413793103449
+          },
+          "keyvalue": {
+            "n": 16,
+            "exact_match": 0.25,
+            "category_accuracy": 0.5625
+          },
+          "ticket": {
+            "n": 19,
+            "exact_match": 0.15789473684210525,
+            "category_accuracy": 0.3684210526315789
+          }
+        },
+        "confusion": [
+          [
+            4,
+            1,
+            2,
+            0,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            2,
+            0,
+            8,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            6,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            4,
+            6,
+            1,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            3,
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            8,
+            1,
+            1
+          ],
+          [
+            0,
+            3,
+            2,
+            0,
+            0,
+            1,
+            2,
+            0,
+            1,
+            6
+          ]
+        ],
+        "errors": [
+          "invalid JSON: Expecting ',' delimiter",
+          "invalid JSON: Expecting property name enclosed in double quotes",
+          "schema: category: Input should be 'repairs_maintenance', 'utilities', 'community_fees', 'property_tax', 'insurance', 'mortgage_interest', 'improvement', 'professional_services' or 'non_deductible'",
+          "schema: date: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'",
+          "schema: recharged_to_tenant: Field required",
+          "schema: vat: Input should be a valid number"
+        ]
+      },
+      "test": {
+        "contender": "qwen1.5b-zeroshot",
+        "split": "test",
+        "n": 300,
+        "json_valid": 0.6066666666666667,
+        "category_accuracy": 0.45666666666666667,
+        "macro_f1": 0.4526524748265603,
+        "exact_match": 0.13666666666666666,
+        "field_accuracy": {
+          "vendor": 0.8966666666666666,
+          "date": 0.6333333333333333,
+          "base": 0.8933333333333333,
+          "vat": 0.7333333333333333,
+          "total": 0.93,
+          "period_start": 0.6733333333333333,
+          "period_end": 0.6466666666666666,
+          "recharged_to_tenant": 0.9033333333333333
+        },
+        "mean_field_accuracy": 0.78875,
+        "ci": {
+          "macro_f1": [
+            0.3980262081928305,
+            0.500150704282395
+          ],
+          "exact_match": [
+            0.1,
+            0.17666666666666667
+          ],
+          "json_valid": [
+            0.55,
+            0.66
+          ],
+          "mean_field_accuracy": [
+            0.765,
+            0.8116770833333332
+          ]
+        },
+        "latency_p50_s": 4.8994,
+        "latency_p95_s": 6.265980000000001,
+        "latency_mean_s": 4.880952666666667,
+        "prompt_tokens_mean": 638.1433333333333,
+        "gen_tokens_mean": 105.78666666666666,
+        "gen_tps_median": 45.7,
+        "retried": 0,
+        "peak_memory_gb": 1.561,
+        "load_seconds": 0.84,
+        "hours_per_1k_docs": 1.3558201851851852,
+        "kwh_per_1k_docs": 0.027116403703703707,
+        "eur_per_1k_docs_local": 0.004880952666666667,
+        "slices": {
+          "clean": {
+            "n": 86,
+            "exact_match": 0.12790697674418605,
+            "category_accuracy": 0.5232558139534884
+          },
+          "distractor_amount": {
+            "n": 62,
+            "exact_match": 0.12903225806451613,
+            "category_accuracy": 0.5161290322580645
+          },
+          "injection": {
+            "n": 27,
+            "exact_match": 0.0,
+            "category_accuracy": 0.14814814814814814
+          },
+          "misleading_vendor": {
+            "n": 6,
+            "exact_match": 0.16666666666666666,
+            "category_accuracy": 0.16666666666666666
+          },
+          "ocr_heavy": {
+            "n": 37,
+            "exact_match": 0.16216216216216217,
+            "category_accuracy": 0.5135135135135135
+          },
+          "ocr_light": {
+            "n": 82,
+            "exact_match": 0.08536585365853659,
+            "category_accuracy": 0.4146341463414634
+          },
+          "owner_home": {
+            "n": 18,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 39,
+            "exact_match": 0.1282051282051282,
+            "category_accuracy": 0.358974358974359
+          },
+          "repair_vs_improvement": {
+            "n": 24,
+            "exact_match": 0.5,
+            "category_accuracy": 0.5
+          },
+          "withholding": {
+            "n": 9,
+            "exact_match": 0.1111111111111111,
+            "category_accuracy": 0.1111111111111111
+          }
+        },
+        "layouts": {
+          "columns": {
+            "n": 61,
+            "exact_match": 0.22950819672131148,
+            "category_accuracy": 0.4918032786885246
+          },
+          "dotted": {
+            "n": 78,
+            "exact_match": 0.11538461538461539,
+            "category_accuracy": 0.3717948717948718
+          },
+          "letter": {
+            "n": 84,
+            "exact_match": 0.07142857142857142,
+            "category_accuracy": 0.36904761904761907
+          },
+          "note": {
+            "n": 77,
+            "exact_match": 0.15584415584415584,
+            "category_accuracy": 0.6103896103896104
+          }
+        },
+        "confusion": [
+          [
+            15,
+            8,
+            5,
+            0,
+            1,
+            1,
+            4,
+            2,
+            2,
+            1
+          ],
+          [
+            0,
+            25,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7
+          ],
+          [
+            0,
+            0,
+            18,
+            0,
+            0,
+            3,
+            0,
+            2,
+            0,
+            9
+          ],
+          [
+            0,
+            0,
+            8,
+            18,
+            0,
+            3,
+            0,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            1,
+            21,
+            7,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            27,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            1,
+            2,
+            0,
+            22,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            4,
+            0,
+            8,
+            1,
+            1,
+            3,
+            8
+          ],
+          [
+            0,
+            15,
+            10,
+            1,
+            0,
+            0,
+            5,
+            0,
+            4,
+            12
+          ]
+        ],
+        "errors": [
+          "schema: category: Input should be 'repairs_maintenance', 'utilities', 'community_fees', 'property_tax', 'insurance', 'mortgage_interest', 'improvement', 'professional_services' or 'non_deductible'",
+          "schema: date: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'",
+          "schema: period_start: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'",
+          "schema: recharged_to_tenant: Field required",
+          "schema: vat: Input should be a valid number"
+        ]
+      },
+      "hard": {
+        "contender": "qwen1.5b-zeroshot",
+        "split": "hard",
+        "n": 200,
+        "json_valid": 0.44,
+        "category_accuracy": 0.29,
+        "macro_f1": 0.26738240594783824,
+        "exact_match": 0.045,
+        "field_accuracy": {
+          "vendor": 0.865,
+          "date": 0.735,
+          "base": 0.84,
+          "vat": 0.565,
+          "total": 0.925,
+          "period_start": 0.55,
+          "period_end": 0.54,
+          "recharged_to_tenant": 0.885
+        },
+        "mean_field_accuracy": 0.738125,
+        "ci": {
+          "macro_f1": [
+            0.21435885889684392,
+            0.31696097371900955
+          ],
+          "exact_match": [
+            0.02,
+            0.075
+          ],
+          "json_valid": [
+            0.37,
+            0.51
+          ],
+          "mean_field_accuracy": [
+            0.7075,
+            0.766875
+          ]
+        },
+        "latency_p50_s": 5.10295,
+        "latency_p95_s": 7.36098,
+        "latency_mean_s": 5.160483500000001,
+        "prompt_tokens_mean": 649.625,
+        "gen_tokens_mean": 105.955,
+        "gen_tps_median": 44.400000000000006,
+        "retried": 0,
+        "peak_memory_gb": 1.56,
+        "load_seconds": 0.72,
+        "hours_per_1k_docs": 1.433467638888889,
+        "kwh_per_1k_docs": 0.028669352777777782,
+        "eur_per_1k_docs_local": 0.0051604835,
+        "slices": {
+          "distractor_amount": {
+            "n": 116,
+            "exact_match": 0.04310344827586207,
+            "category_accuracy": 0.25
+          },
+          "injection": {
+            "n": 68,
+            "exact_match": 0.0,
+            "category_accuracy": 0.058823529411764705
+          },
+          "misleading_vendor": {
+            "n": 5,
+            "exact_match": 0.4,
+            "category_accuracy": 0.4
+          },
+          "ocr_heavy": {
+            "n": 200,
+            "exact_match": 0.045,
+            "category_accuracy": 0.29
+          },
+          "owner_home": {
+            "n": 13,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 46,
+            "exact_match": 0.021739130434782608,
+            "category_accuracy": 0.2391304347826087
+          },
+          "repair_vs_improvement": {
+            "n": 41,
+            "exact_match": 0.21951219512195122,
+            "category_accuracy": 0.36585365853658536
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          }
+        },
+        "layouts": {
+          "csv": {
+            "n": 108,
+            "exact_match": 0.037037037037037035,
+            "category_accuracy": 0.28703703703703703
+          },
+          "scan": {
+            "n": 92,
+            "exact_match": 0.05434782608695652,
+            "category_accuracy": 0.29347826086956524
+          }
+        },
+        "confusion": [
+          [
+            6,
+            5,
+            1,
+            0,
+            0,
+            3,
+            2,
+            2,
+            4,
+            0
+          ],
+          [
+            0,
+            11,
+            1,
+            0,
+            2,
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            4,
+            5,
+            3,
+            0,
+            0,
+            2,
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            1,
+            4,
+            7,
+            0,
+            5,
+            0,
+            2,
+            4,
+            3
+          ],
+          [
+            0,
+            0,
+            4,
+            16,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            1,
+            16,
+            2,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            2,
+            5,
+            2,
+            1,
+            1,
+            10,
+            3,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            8,
+            1,
+            0,
+            6,
+            3
+          ],
+          [
+            1,
+            5,
+            5,
+            4,
+            0,
+            1,
+            0,
+            0,
+            3,
+            0
+          ]
+        ],
+        "errors": [
+          "invalid JSON: Expecting ',' delimiter",
+          "invalid JSON: Expecting property name enclosed in double quotes",
+          "schema: base: Input should be a valid number, unable to parse string as a number",
+          "schema: category: Input should be 'repairs_maintenance', 'utilities', 'community_fees', 'property_tax', 'insurance', 'mortgage_interest', 'improvement', 'professional_services' or 'non_deductible'",
+          "schema: date: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'",
+          "schema: recharged_to_tenant: Field required",
+          "schema: vat: Input should be a valid number"
+        ]
+      }
+    },
+    "qwen1.5b-fewshot": {
+      "dev": {
+        "contender": "qwen1.5b-fewshot",
+        "split": "dev",
+        "n": 120,
+        "json_valid": 0.9416666666666667,
+        "category_accuracy": 0.6333333333333333,
+        "macro_f1": 0.6011289778052231,
+        "exact_match": 0.275,
+        "field_accuracy": {
+          "vendor": 0.9,
+          "date": 0.8583333333333333,
+          "base": 0.8833333333333333,
+          "vat": 0.925,
+          "total": 0.9666666666666667,
+          "period_start": 0.8833333333333333,
+          "period_end": 0.8333333333333334,
+          "recharged_to_tenant": 0.9916666666666667
+        },
+        "mean_field_accuracy": 0.9052083333333333,
+        "ci": {
+          "macro_f1": [
+            0.5111241756877625,
+            0.6752759323133823
+          ],
+          "exact_match": [
+            0.19166666666666668,
+            0.35
+          ],
+          "json_valid": [
+            0.9,
+            0.975
+          ],
+          "mean_field_accuracy": [
+            0.884375,
+            0.925
+          ]
+        },
+        "latency_p50_s": 8.394749999999998,
+        "latency_p95_s": 11.78302,
+        "latency_mean_s": 8.387176666666665,
+        "prompt_tokens_mean": 1635.7833333333333,
+        "gen_tokens_mean": 103.31666666666666,
+        "gen_tps_median": 36.25,
+        "retried": 0,
+        "peak_memory_gb": 1.513,
+        "load_seconds": 0.77,
+        "hours_per_1k_docs": 2.3297712962962955,
+        "kwh_per_1k_docs": 0.046595425925925915,
+        "eur_per_1k_docs_local": 0.008387176666666664,
+        "slices": {
+          "clean": {
+            "n": 39,
+            "exact_match": 0.3076923076923077,
+            "category_accuracy": 0.7692307692307693
+          },
+          "distractor_amount": {
+            "n": 18,
+            "exact_match": 0.16666666666666666,
+            "category_accuracy": 0.5555555555555556
+          },
+          "injection": {
+            "n": 13,
+            "exact_match": 0.0,
+            "category_accuracy": 0.07692307692307693
+          },
+          "misleading_vendor": {
+            "n": 1,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "ocr_heavy": {
+            "n": 19,
+            "exact_match": 0.42105263157894735,
+            "category_accuracy": 0.631578947368421
+          },
+          "ocr_light": {
+            "n": 30,
+            "exact_match": 0.23333333333333334,
+            "category_accuracy": 0.7
+          },
+          "owner_home": {
+            "n": 3,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 21,
+            "exact_match": 0.14285714285714285,
+            "category_accuracy": 0.47619047619047616
+          },
+          "repair_vs_improvement": {
+            "n": 6,
+            "exact_match": 0.16666666666666666,
+            "category_accuracy": 0.16666666666666666
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.7142857142857143,
+            "category_accuracy": 0.8571428571428571
+          }
+        },
+        "layouts": {
+          "bank": {
+            "n": 24,
+            "exact_match": 0.125,
+            "category_accuracy": 0.75
+          },
+          "email": {
+            "n": 32,
+            "exact_match": 0.1875,
+            "category_accuracy": 0.625
+          },
+          "invoice": {
+            "n": 29,
+            "exact_match": 0.4482758620689655,
+            "category_accuracy": 0.7586206896551724
+          },
+          "keyvalue": {
+            "n": 16,
+            "exact_match": 0.3125,
+            "category_accuracy": 0.5
+          },
+          "ticket": {
+            "n": 19,
+            "exact_match": 0.3157894736842105,
+            "category_accuracy": 0.42105263157894735
+          }
+        },
+        "confusion": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            2,
+            2,
+            0
+          ],
+          [
+            0,
+            14,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            10,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            7,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            7,
+            6,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            5,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            10,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            8,
+            0
+          ]
+        ],
+        "errors": [
+          "schema: imported_last_month: Extra inputs are not permitted",
+          "schema: period_start: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'"
+        ]
+      },
+      "test": {
+        "contender": "qwen1.5b-fewshot",
+        "split": "test",
+        "n": 300,
+        "json_valid": 0.9833333333333333,
+        "category_accuracy": 0.5533333333333333,
+        "macro_f1": 0.527632682484472,
+        "exact_match": 0.26666666666666666,
+        "field_accuracy": {
+          "vendor": 0.92,
+          "date": 0.8733333333333333,
+          "base": 0.87,
+          "vat": 0.9233333333333333,
+          "total": 0.9333333333333333,
+          "period_start": 0.92,
+          "period_end": 0.8766666666666667,
+          "recharged_to_tenant": 0.9466666666666667
+        },
+        "mean_field_accuracy": 0.9079166666666667,
+        "ci": {
+          "macro_f1": [
+            0.4685490674692989,
+            0.577604314081426
+          ],
+          "exact_match": [
+            0.21666666666666667,
+            0.31666666666666665
+          ],
+          "json_valid": [
+            0.9666666666666667,
+            0.9966666666666667
+          ],
+          "mean_field_accuracy": [
+            0.895,
+            0.9204166666666667
+          ]
+        },
+        "latency_p50_s": 8.11355,
+        "latency_p95_s": 10.349265,
+        "latency_mean_s": 8.042548333333333,
+        "prompt_tokens_mean": 1626.1433333333334,
+        "gen_tokens_mean": 101.80333333333333,
+        "gen_tps_median": 39.150000000000006,
+        "retried": 0,
+        "peak_memory_gb": 1.516,
+        "load_seconds": 1.06,
+        "hours_per_1k_docs": 2.2340412037037036,
+        "kwh_per_1k_docs": 0.04468082407407407,
+        "eur_per_1k_docs_local": 0.008042548333333331,
+        "slices": {
+          "clean": {
+            "n": 86,
+            "exact_match": 0.3488372093023256,
+            "category_accuracy": 0.6395348837209303
+          },
+          "distractor_amount": {
+            "n": 62,
+            "exact_match": 0.1935483870967742,
+            "category_accuracy": 0.6774193548387096
+          },
+          "injection": {
+            "n": 27,
+            "exact_match": 0.037037037037037035,
+            "category_accuracy": 0.07407407407407407
+          },
+          "misleading_vendor": {
+            "n": 6,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "ocr_heavy": {
+            "n": 37,
+            "exact_match": 0.2972972972972973,
+            "category_accuracy": 0.6216216216216216
+          },
+          "ocr_light": {
+            "n": 82,
+            "exact_match": 0.25609756097560976,
+            "category_accuracy": 0.573170731707317
+          },
+          "owner_home": {
+            "n": 18,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 39,
+            "exact_match": 0.23076923076923078,
+            "category_accuracy": 0.4358974358974359
+          },
+          "repair_vs_improvement": {
+            "n": 24,
+            "exact_match": 0.3333333333333333,
+            "category_accuracy": 0.375
+          },
+          "withholding": {
+            "n": 9,
+            "exact_match": 0.2222222222222222,
+            "category_accuracy": 0.3333333333333333
+          }
+        },
+        "layouts": {
+          "columns": {
+            "n": 61,
+            "exact_match": 0.3114754098360656,
+            "category_accuracy": 0.5409836065573771
+          },
+          "dotted": {
+            "n": 78,
+            "exact_match": 0.28205128205128205,
+            "category_accuracy": 0.5512820512820513
+          },
+          "letter": {
+            "n": 84,
+            "exact_match": 0.2857142857142857,
+            "category_accuracy": 0.5595238095238095
+          },
+          "note": {
+            "n": 77,
+            "exact_match": 0.19480519480519481,
+            "category_accuracy": 0.5584415584415584
+          }
+        },
+        "confusion": [
+          [
+            3,
+            5,
+            1,
+            0,
+            1,
+            1,
+            21,
+            3,
+            4,
+            0
+          ],
+          [
+            1,
+            27,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            24,
+            0,
+            0,
+            5,
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            23,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            15,
+            9,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            27,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            26,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            0,
+            2,
+            1,
+            9,
+            10,
+            0
+          ],
+          [
+            0,
+            10,
+            8,
+            1,
+            0,
+            0,
+            9,
+            1,
+            18,
+            0
+          ]
+        ],
+        "errors": [
+          "schema: period_start: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'"
+        ]
+      },
+      "hard": {
+        "contender": "qwen1.5b-fewshot",
+        "split": "hard",
+        "n": 200,
+        "json_valid": 1.0,
+        "category_accuracy": 0.345,
+        "macro_f1": 0.30932217397538786,
+        "exact_match": 0.125,
+        "field_accuracy": {
+          "vendor": 0.965,
+          "date": 0.885,
+          "base": 0.86,
+          "vat": 0.91,
+          "total": 0.98,
+          "period_start": 0.77,
+          "period_end": 0.75,
+          "recharged_to_tenant": 0.935
+        },
+        "mean_field_accuracy": 0.881875,
+        "ci": {
+          "macro_f1": [
+            0.24953856325585896,
+            0.36389944738205166
+          ],
+          "exact_match": [
+            0.08,
+            0.175
+          ],
+          "json_valid": [
+            1.0,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.864375,
+            0.898125
+          ]
+        },
+        "latency_p50_s": 3.0206,
+        "latency_p95_s": 8.66984,
+        "latency_mean_s": 4.933290500000001,
+        "prompt_tokens_mean": 1637.625,
+        "gen_tokens_mean": 103.74,
+        "gen_tps_median": 86.30000000000001,
+        "retried": 0,
+        "peak_memory_gb": 1.515,
+        "load_seconds": 0.71,
+        "hours_per_1k_docs": 1.3703584722222224,
+        "kwh_per_1k_docs": 0.027407169444444452,
+        "eur_per_1k_docs_local": 0.004933290500000001,
+        "slices": {
+          "distractor_amount": {
+            "n": 116,
+            "exact_match": 0.09482758620689655,
+            "category_accuracy": 0.33620689655172414
+          },
+          "injection": {
+            "n": 68,
+            "exact_match": 0.014705882352941176,
+            "category_accuracy": 0.11764705882352941
+          },
+          "misleading_vendor": {
+            "n": 5,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "ocr_heavy": {
+            "n": 200,
+            "exact_match": 0.125,
+            "category_accuracy": 0.345
+          },
+          "owner_home": {
+            "n": 13,
+            "exact_match": 0.0,
+            "category_accuracy": 0.07692307692307693
+          },
+          "recharge_negated": {
+            "n": 46,
+            "exact_match": 0.10869565217391304,
+            "category_accuracy": 0.2826086956521739
+          },
+          "repair_vs_improvement": {
+            "n": 41,
+            "exact_match": 0.2926829268292683,
+            "category_accuracy": 0.43902439024390244
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.14285714285714285,
+            "category_accuracy": 0.14285714285714285
+          }
+        },
+        "layouts": {
+          "csv": {
+            "n": 108,
+            "exact_match": 0.10185185185185185,
+            "category_accuracy": 0.3055555555555556
+          },
+          "scan": {
+            "n": 92,
+            "exact_match": 0.15217391304347827,
+            "category_accuracy": 0.391304347826087
+          }
+        },
+        "confusion": [
+          [
+            1,
+            2,
+            4,
+            0,
+            0,
+            3,
+            5,
+            3,
+            5,
+            0
+          ],
+          [
+            0,
+            7,
+            2,
+            0,
+            2,
+            1,
+            0,
+            1,
+            5,
+            0
+          ],
+          [
+            0,
+            3,
+            11,
+            2,
+            1,
+            0,
+            2,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            8,
+            0,
+            6,
+            1,
+            1,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            17,
+            3,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            1,
+            17,
+            2,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            2,
+            1,
+            0,
+            17,
+            3,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            2,
+            0,
+            5,
+            2,
+            1,
+            9,
+            0
+          ],
+          [
+            0,
+            5,
+            4,
+            4,
+            0,
+            1,
+            1,
+            0,
+            4,
+            0
+          ]
+        ],
+        "errors": []
+      }
+    },
+    "qwen1.5b-fewshot-retry": {
+      "dev": {
+        "contender": "qwen1.5b-fewshot-retry",
+        "split": "dev",
+        "n": 120,
+        "json_valid": 0.9916666666666667,
+        "category_accuracy": 0.6333333333333333,
+        "macro_f1": 0.6011289778052231,
+        "exact_match": 0.2833333333333333,
+        "field_accuracy": {
+          "vendor": 0.9,
+          "date": 0.8583333333333333,
+          "base": 0.8833333333333333,
+          "vat": 0.925,
+          "total": 0.9666666666666667,
+          "period_start": 0.9,
+          "period_end": 0.875,
+          "recharged_to_tenant": 0.9916666666666667
+        },
+        "mean_field_accuracy": 0.9125,
+        "ci": {
+          "macro_f1": [
+            0.5111241756877625,
+            0.6752759323133823
+          ],
+          "exact_match": [
+            0.2,
+            0.36666666666666664
+          ],
+          "json_valid": [
+            0.975,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.8926822916666667,
+            0.9322916666666666
+          ]
+        },
+        "latency_p50_s": 8.4328,
+        "latency_p95_s": 12.28741,
+        "latency_mean_s": 8.603846666666668,
+        "prompt_tokens_mean": 1740.575,
+        "gen_tokens_mean": 109.95,
+        "gen_tps_median": 37.25,
+        "retried": 7,
+        "peak_memory_gb": 1.513,
+        "load_seconds": 0.77,
+        "hours_per_1k_docs": 2.3899574074074077,
+        "kwh_per_1k_docs": 0.04779914814814815,
+        "eur_per_1k_docs_local": 0.008603846666666666,
+        "slices": {
+          "clean": {
+            "n": 39,
+            "exact_match": 0.3076923076923077,
+            "category_accuracy": 0.7692307692307693
+          },
+          "distractor_amount": {
+            "n": 18,
+            "exact_match": 0.2222222222222222,
+            "category_accuracy": 0.5555555555555556
+          },
+          "injection": {
+            "n": 13,
+            "exact_match": 0.07692307692307693,
+            "category_accuracy": 0.07692307692307693
+          },
+          "misleading_vendor": {
+            "n": 1,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "ocr_heavy": {
+            "n": 19,
+            "exact_match": 0.42105263157894735,
+            "category_accuracy": 0.631578947368421
+          },
+          "ocr_light": {
+            "n": 30,
+            "exact_match": 0.23333333333333334,
+            "category_accuracy": 0.7
+          },
+          "owner_home": {
+            "n": 3,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 21,
+            "exact_match": 0.14285714285714285,
+            "category_accuracy": 0.47619047619047616
+          },
+          "repair_vs_improvement": {
+            "n": 6,
+            "exact_match": 0.16666666666666666,
+            "category_accuracy": 0.16666666666666666
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.7142857142857143,
+            "category_accuracy": 0.8571428571428571
+          }
+        },
+        "layouts": {
+          "bank": {
+            "n": 24,
+            "exact_match": 0.16666666666666666,
+            "category_accuracy": 0.75
+          },
+          "email": {
+            "n": 32,
+            "exact_match": 0.1875,
+            "category_accuracy": 0.625
+          },
+          "invoice": {
+            "n": 29,
+            "exact_match": 0.4482758620689655,
+            "category_accuracy": 0.7586206896551724
+          },
+          "keyvalue": {
+            "n": 16,
+            "exact_match": 0.3125,
+            "category_accuracy": 0.5
+          },
+          "ticket": {
+            "n": 19,
+            "exact_match": 0.3157894736842105,
+            "category_accuracy": 0.42105263157894735
+          }
+        },
+        "confusion": [
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            2,
+            2,
+            0
+          ],
+          [
+            0,
+            14,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            10,
+            0,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            7,
+            9,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            7,
+            6,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            5,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            10,
+            1,
+            0
+          ],
+          [
+            0,
+            3,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            8,
+            0
+          ]
+        ],
+        "errors": [
+          "schema: imported_last_month: Extra inputs are not permitted"
+        ]
+      },
+      "test": {
+        "contender": "qwen1.5b-fewshot-retry",
+        "split": "test",
+        "n": 300,
+        "json_valid": 0.9966666666666667,
+        "category_accuracy": 0.5533333333333333,
+        "macro_f1": 0.527632682484472,
+        "exact_match": 0.2733333333333333,
+        "field_accuracy": {
+          "vendor": 0.92,
+          "date": 0.8733333333333333,
+          "base": 0.87,
+          "vat": 0.9233333333333333,
+          "total": 0.9333333333333333,
+          "period_start": 0.93,
+          "period_end": 0.8833333333333333,
+          "recharged_to_tenant": 0.9466666666666667
+        },
+        "mean_field_accuracy": 0.91,
+        "ci": {
+          "macro_f1": [
+            0.4685490674692989,
+            0.577604314081426
+          ],
+          "exact_match": [
+            0.22333333333333333,
+            0.32666666666666666
+          ],
+          "json_valid": [
+            0.99,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.8970833333333333,
+            0.9229166666666667
+          ]
+        },
+        "latency_p50_s": 8.14915,
+        "latency_p95_s": 10.975250000000003,
+        "latency_mean_s": 8.103596666666666,
+        "prompt_tokens_mean": 1655.77,
+        "gen_tokens_mean": 103.62333333333333,
+        "gen_tps_median": 39.2,
+        "retried": 5,
+        "peak_memory_gb": 1.516,
+        "load_seconds": 1.06,
+        "hours_per_1k_docs": 2.250999074074074,
+        "kwh_per_1k_docs": 0.04501998148148148,
+        "eur_per_1k_docs_local": 0.008103596666666666,
+        "slices": {
+          "clean": {
+            "n": 86,
+            "exact_match": 0.36046511627906974,
+            "category_accuracy": 0.6395348837209303
+          },
+          "distractor_amount": {
+            "n": 62,
+            "exact_match": 0.20967741935483872,
+            "category_accuracy": 0.6774193548387096
+          },
+          "injection": {
+            "n": 27,
+            "exact_match": 0.037037037037037035,
+            "category_accuracy": 0.07407407407407407
+          },
+          "misleading_vendor": {
+            "n": 6,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "ocr_heavy": {
+            "n": 37,
+            "exact_match": 0.2972972972972973,
+            "category_accuracy": 0.6216216216216216
+          },
+          "ocr_light": {
+            "n": 82,
+            "exact_match": 0.25609756097560976,
+            "category_accuracy": 0.573170731707317
+          },
+          "owner_home": {
+            "n": 18,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 39,
+            "exact_match": 0.23076923076923078,
+            "category_accuracy": 0.4358974358974359
+          },
+          "repair_vs_improvement": {
+            "n": 24,
+            "exact_match": 0.3333333333333333,
+            "category_accuracy": 0.375
+          },
+          "withholding": {
+            "n": 9,
+            "exact_match": 0.2222222222222222,
+            "category_accuracy": 0.3333333333333333
+          }
+        },
+        "layouts": {
+          "columns": {
+            "n": 61,
+            "exact_match": 0.3114754098360656,
+            "category_accuracy": 0.5409836065573771
+          },
+          "dotted": {
+            "n": 78,
+            "exact_match": 0.3076923076923077,
+            "category_accuracy": 0.5512820512820513
+          },
+          "letter": {
+            "n": 84,
+            "exact_match": 0.2857142857142857,
+            "category_accuracy": 0.5595238095238095
+          },
+          "note": {
+            "n": 77,
+            "exact_match": 0.19480519480519481,
+            "category_accuracy": 0.5584415584415584
+          }
+        },
+        "confusion": [
+          [
+            3,
+            5,
+            1,
+            0,
+            1,
+            1,
+            21,
+            3,
+            4,
+            0
+          ],
+          [
+            1,
+            27,
+            3,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            24,
+            0,
+            0,
+            5,
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            23,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            15,
+            9,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            27,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            26,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            0,
+            2,
+            1,
+            9,
+            10,
+            0
+          ],
+          [
+            0,
+            10,
+            8,
+            1,
+            0,
+            0,
+            9,
+            1,
+            18,
+            0
+          ]
+        ],
+        "errors": [
+          "schema: period_start: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'"
+        ]
+      },
+      "hard": {
+        "contender": "qwen1.5b-fewshot-retry",
+        "split": "hard",
+        "n": 200,
+        "json_valid": 1.0,
+        "category_accuracy": 0.345,
+        "macro_f1": 0.30932217397538786,
+        "exact_match": 0.125,
+        "field_accuracy": {
+          "vendor": 0.965,
+          "date": 0.885,
+          "base": 0.86,
+          "vat": 0.91,
+          "total": 0.98,
+          "period_start": 0.77,
+          "period_end": 0.75,
+          "recharged_to_tenant": 0.935
+        },
+        "mean_field_accuracy": 0.881875,
+        "ci": {
+          "macro_f1": [
+            0.24953856325585896,
+            0.36389944738205166
+          ],
+          "exact_match": [
+            0.08,
+            0.175
+          ],
+          "json_valid": [
+            1.0,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.864375,
+            0.898125
+          ]
+        },
+        "latency_p50_s": 3.0206,
+        "latency_p95_s": 8.66984,
+        "latency_mean_s": 4.933290500000001,
+        "prompt_tokens_mean": 1637.625,
+        "gen_tokens_mean": 103.74,
+        "gen_tps_median": 86.30000000000001,
+        "retried": 0,
+        "peak_memory_gb": 1.515,
+        "load_seconds": 0.71,
+        "hours_per_1k_docs": 1.3703584722222224,
+        "kwh_per_1k_docs": 0.027407169444444452,
+        "eur_per_1k_docs_local": 0.004933290500000001,
+        "slices": {
+          "distractor_amount": {
+            "n": 116,
+            "exact_match": 0.09482758620689655,
+            "category_accuracy": 0.33620689655172414
+          },
+          "injection": {
+            "n": 68,
+            "exact_match": 0.014705882352941176,
+            "category_accuracy": 0.11764705882352941
+          },
+          "misleading_vendor": {
+            "n": 5,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "ocr_heavy": {
+            "n": 200,
+            "exact_match": 0.125,
+            "category_accuracy": 0.345
+          },
+          "owner_home": {
+            "n": 13,
+            "exact_match": 0.0,
+            "category_accuracy": 0.07692307692307693
+          },
+          "recharge_negated": {
+            "n": 46,
+            "exact_match": 0.10869565217391304,
+            "category_accuracy": 0.2826086956521739
+          },
+          "repair_vs_improvement": {
+            "n": 41,
+            "exact_match": 0.2926829268292683,
+            "category_accuracy": 0.43902439024390244
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.14285714285714285,
+            "category_accuracy": 0.14285714285714285
+          }
+        },
+        "layouts": {
+          "csv": {
+            "n": 108,
+            "exact_match": 0.10185185185185185,
+            "category_accuracy": 0.3055555555555556
+          },
+          "scan": {
+            "n": 92,
+            "exact_match": 0.15217391304347827,
+            "category_accuracy": 0.391304347826087
+          }
+        },
+        "confusion": [
+          [
+            1,
+            2,
+            4,
+            0,
+            0,
+            3,
+            5,
+            3,
+            5,
+            0
+          ],
+          [
+            0,
+            7,
+            2,
+            0,
+            2,
+            1,
+            0,
+            1,
+            5,
+            0
+          ],
+          [
+            0,
+            3,
+            11,
+            2,
+            1,
+            0,
+            2,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            1,
+            3,
+            8,
+            0,
+            6,
+            1,
+            1,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            17,
+            3,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            1,
+            17,
+            2,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            2,
+            1,
+            0,
+            17,
+            3,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            2,
+            0,
+            5,
+            2,
+            1,
+            9,
+            0
+          ],
+          [
+            0,
+            5,
+            4,
+            4,
+            0,
+            1,
+            1,
+            0,
+            4,
+            0
+          ]
+        ],
+        "errors": []
+      }
+    },
+    "qwen3b-fewshot": {
+      "test": {
+        "contender": "qwen3b-fewshot",
+        "split": "test",
+        "n": 100,
+        "json_valid": 1.0,
+        "category_accuracy": 0.69,
+        "macro_f1": 0.6979539125591757,
+        "exact_match": 0.49,
+        "field_accuracy": {
+          "vendor": 0.91,
+          "date": 0.98,
+          "base": 0.96,
+          "vat": 0.93,
+          "total": 0.95,
+          "period_start": 0.93,
+          "period_end": 0.92,
+          "recharged_to_tenant": 0.96
+        },
+        "mean_field_accuracy": 0.9425,
+        "ci": {
+          "macro_f1": [
+            0.5985441622646753,
+            0.7763329623303301
+          ],
+          "exact_match": [
+            0.39,
+            0.59
+          ],
+          "json_valid": [
+            1.0,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.92375,
+            0.96
+          ]
+        },
+        "latency_p50_s": 6.9937000000000005,
+        "latency_p95_s": 8.077495,
+        "latency_mean_s": 7.030931000000001,
+        "prompt_tokens_mean": 1626.44,
+        "gen_tokens_mean": 103.27,
+        "gen_tps_median": 51.45,
+        "retried": 0,
+        "peak_memory_gb": 2.502,
+        "load_seconds": 0.99,
+        "hours_per_1k_docs": 1.953036388888889,
+        "kwh_per_1k_docs": 0.03906072777777778,
+        "eur_per_1k_docs_local": 0.007030931000000001,
+        "slices": {
+          "clean": {
+            "n": 27,
+            "exact_match": 0.6666666666666666,
+            "category_accuracy": 0.8888888888888888
+          },
+          "distractor_amount": {
+            "n": 16,
+            "exact_match": 0.375,
+            "category_accuracy": 0.625
+          },
+          "injection": {
+            "n": 11,
+            "exact_match": 0.0,
+            "category_accuracy": 0.09090909090909091
+          },
+          "misleading_vendor": {
+            "n": 3,
+            "exact_match": 0.3333333333333333,
+            "category_accuracy": 0.6666666666666666
+          },
+          "ocr_heavy": {
+            "n": 9,
+            "exact_match": 0.6666666666666666,
+            "category_accuracy": 0.7777777777777778
+          },
+          "ocr_light": {
+            "n": 29,
+            "exact_match": 0.3793103448275862,
+            "category_accuracy": 0.6206896551724138
+          },
+          "owner_home": {
+            "n": 8,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 16,
+            "exact_match": 0.3125,
+            "category_accuracy": 0.6875
+          },
+          "repair_vs_improvement": {
+            "n": 9,
+            "exact_match": 0.6666666666666666,
+            "category_accuracy": 0.7777777777777778
+          },
+          "withholding": {
+            "n": 5,
+            "exact_match": 0.6,
+            "category_accuracy": 1.0
+          }
+        },
+        "layouts": {
+          "columns": {
+            "n": 18,
+            "exact_match": 0.2222222222222222,
+            "category_accuracy": 0.6666666666666666
+          },
+          "dotted": {
+            "n": 25,
+            "exact_match": 0.64,
+            "category_accuracy": 0.76
+          },
+          "letter": {
+            "n": 30,
+            "exact_match": 0.5,
+            "category_accuracy": 0.6
+          },
+          "note": {
+            "n": 27,
+            "exact_match": 0.5185185185185185,
+            "category_accuracy": 0.7407407407407407
+          }
+        },
+        "confusion": [
+          [
+            11,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            9,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            7,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            7,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            9,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            8,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0
+          ]
+        ],
+        "errors": []
+      },
+      "hard": {
+        "contender": "qwen3b-fewshot",
+        "split": "hard",
+        "n": 100,
+        "json_valid": 1.0,
+        "category_accuracy": 0.5,
+        "macro_f1": 0.4929461982678356,
+        "exact_match": 0.34,
+        "field_accuracy": {
+          "vendor": 0.96,
+          "date": 0.94,
+          "base": 0.95,
+          "vat": 0.93,
+          "total": 0.98,
+          "period_start": 0.89,
+          "period_end": 0.88,
+          "recharged_to_tenant": 0.95
+        },
+        "mean_field_accuracy": 0.935,
+        "ci": {
+          "macro_f1": [
+            0.39081498253050634,
+            0.5695984332272602
+          ],
+          "exact_match": [
+            0.25,
+            0.43024999999999863
+          ],
+          "json_valid": [
+            1.0,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.91375,
+            0.955
+          ]
+        },
+        "latency_p50_s": 6.82455,
+        "latency_p95_s": 7.5617,
+        "latency_mean_s": 6.879262,
+        "prompt_tokens_mean": 1636.46,
+        "gen_tokens_mean": 104.64,
+        "gen_tps_median": 52.1,
+        "retried": 0,
+        "peak_memory_gb": 2.502,
+        "load_seconds": 1.03,
+        "hours_per_1k_docs": 1.910906111111111,
+        "kwh_per_1k_docs": 0.03821812222222222,
+        "eur_per_1k_docs_local": 0.006879262,
+        "slices": {
+          "distractor_amount": {
+            "n": 56,
+            "exact_match": 0.30357142857142855,
+            "category_accuracy": 0.48214285714285715
+          },
+          "injection": {
+            "n": 35,
+            "exact_match": 0.02857142857142857,
+            "category_accuracy": 0.08571428571428572
+          },
+          "misleading_vendor": {
+            "n": 4,
+            "exact_match": 0.5,
+            "category_accuracy": 0.5
+          },
+          "ocr_heavy": {
+            "n": 100,
+            "exact_match": 0.34,
+            "category_accuracy": 0.5
+          },
+          "owner_home": {
+            "n": 7,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 24,
+            "exact_match": 0.25,
+            "category_accuracy": 0.3333333333333333
+          },
+          "repair_vs_improvement": {
+            "n": 21,
+            "exact_match": 0.5714285714285714,
+            "category_accuracy": 0.6190476190476191
+          },
+          "withholding": {
+            "n": 2,
+            "exact_match": 0.5,
+            "category_accuracy": 0.5
+          }
+        },
+        "layouts": {
+          "csv": {
+            "n": 53,
+            "exact_match": 0.37735849056603776,
+            "category_accuracy": 0.5283018867924528
+          },
+          "scan": {
+            "n": 47,
+            "exact_match": 0.2978723404255319,
+            "category_accuracy": 0.46808510638297873
+          }
+        },
+        "confusion": [
+          [
+            6,
+            2,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            5,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            7,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            7,
+            0,
+            0,
+            0,
+            1,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            9,
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            1,
+            5,
+            1,
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            7,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            3,
+            3,
+            0
+          ],
+          [
+            0,
+            3,
+            4,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "errors": []
+      }
+    },
+    "qwen0.5b-lora": {
+      "dev": {
+        "contender": "qwen0.5b-lora",
+        "split": "dev",
+        "n": 120,
+        "json_valid": 0.9916666666666667,
+        "category_accuracy": 0.9916666666666667,
+        "macro_f1": 0.9955555555555556,
+        "exact_match": 0.9166666666666666,
+        "field_accuracy": {
+          "vendor": 0.9583333333333334,
+          "date": 0.9916666666666667,
+          "base": 0.9833333333333333,
+          "vat": 0.9916666666666667,
+          "total": 0.9833333333333333,
+          "period_start": 0.9833333333333333,
+          "period_end": 0.975,
+          "recharged_to_tenant": 0.9916666666666667
+        },
+        "mean_field_accuracy": 0.9822916666666667,
+        "ci": {
+          "macro_f1": [
+            0.9824561403508771,
+            1.0
+          ],
+          "exact_match": [
+            0.8666666666666667,
+            0.9585416666666655
+          ],
+          "json_valid": [
+            0.975,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.9625,
+            0.9947916666666666
+          ]
+        },
+        "latency_p50_s": 0.7201500000000001,
+        "latency_p95_s": 0.8535050000000001,
+        "latency_mean_s": 0.7216791666666665,
+        "prompt_tokens_mean": 181.78333333333333,
+        "gen_tokens_mean": 102.43333333333334,
+        "gen_tps_median": 168.60000000000002,
+        "retried": 0,
+        "peak_memory_gb": 0.563,
+        "load_seconds": 0.55,
+        "hours_per_1k_docs": 0.20046643518518514,
+        "kwh_per_1k_docs": 0.004009328703703703,
+        "eur_per_1k_docs_local": 0.0007216791666666666,
+        "slices": {
+          "clean": {
+            "n": 39,
+            "exact_match": 0.9743589743589743,
+            "category_accuracy": 1.0
+          },
+          "distractor_amount": {
+            "n": 18,
+            "exact_match": 0.9444444444444444,
+            "category_accuracy": 1.0
+          },
+          "injection": {
+            "n": 13,
+            "exact_match": 0.9230769230769231,
+            "category_accuracy": 1.0
+          },
+          "misleading_vendor": {
+            "n": 1,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "ocr_heavy": {
+            "n": 19,
+            "exact_match": 0.7894736842105263,
+            "category_accuracy": 1.0
+          },
+          "ocr_light": {
+            "n": 30,
+            "exact_match": 0.9333333333333333,
+            "category_accuracy": 0.9666666666666667
+          },
+          "owner_home": {
+            "n": 3,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "recharge_negated": {
+            "n": 21,
+            "exact_match": 0.8571428571428571,
+            "category_accuracy": 1.0
+          },
+          "repair_vs_improvement": {
+            "n": 6,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          }
+        },
+        "layouts": {
+          "bank": {
+            "n": 24,
+            "exact_match": 0.875,
+            "category_accuracy": 1.0
+          },
+          "email": {
+            "n": 32,
+            "exact_match": 0.9375,
+            "category_accuracy": 1.0
+          },
+          "invoice": {
+            "n": 29,
+            "exact_match": 0.8620689655172413,
+            "category_accuracy": 0.9655172413793104
+          },
+          "keyvalue": {
+            "n": 16,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "ticket": {
+            "n": 19,
+            "exact_match": 0.9473684210526315,
+            "category_accuracy": 1.0
+          }
+        },
+        "confusion": [
+          [
+            13,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            12,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            14,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            14,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            15,
+            0
+          ]
+        ],
+        "errors": [
+          "invalid JSON: Expecting ',' delimiter"
+        ]
+      },
+      "test": {
+        "contender": "qwen0.5b-lora",
+        "split": "test",
+        "n": 300,
+        "json_valid": 0.9766666666666667,
+        "category_accuracy": 0.8866666666666667,
+        "macro_f1": 0.8991807733320584,
+        "exact_match": 0.44666666666666666,
+        "field_accuracy": {
+          "vendor": 0.7366666666666667,
+          "date": 0.8533333333333334,
+          "base": 0.8666666666666667,
+          "vat": 0.84,
+          "total": 0.79,
+          "period_start": 0.9466666666666667,
+          "period_end": 0.96,
+          "recharged_to_tenant": 0.9366666666666666
+        },
+        "mean_field_accuracy": 0.86625,
+        "ci": {
+          "macro_f1": [
+            0.8668074738956055,
+            0.9283978542367068
+          ],
+          "exact_match": [
+            0.39,
+            0.5033333333333333
+          ],
+          "json_valid": [
+            0.9566666666666667,
+            0.9933333333333333
+          ],
+          "mean_field_accuracy": [
+            0.84290625,
+            0.8870833333333333
+          ]
+        },
+        "latency_p50_s": 0.7325,
+        "latency_p95_s": 0.914455,
+        "latency_mean_s": 0.7349670000000001,
+        "prompt_tokens_mean": 172.14333333333335,
+        "gen_tokens_mean": 102.61333333333333,
+        "gen_tps_median": 163.8,
+        "retried": 0,
+        "peak_memory_gb": 0.574,
+        "load_seconds": 0.41,
+        "hours_per_1k_docs": 0.20415750000000002,
+        "kwh_per_1k_docs": 0.004083150000000001,
+        "eur_per_1k_docs_local": 0.0007349670000000001,
+        "slices": {
+          "clean": {
+            "n": 86,
+            "exact_match": 0.5697674418604651,
+            "category_accuracy": 0.9534883720930233
+          },
+          "distractor_amount": {
+            "n": 62,
+            "exact_match": 0.4032258064516129,
+            "category_accuracy": 0.9032258064516129
+          },
+          "injection": {
+            "n": 27,
+            "exact_match": 0.37037037037037035,
+            "category_accuracy": 0.7777777777777778
+          },
+          "misleading_vendor": {
+            "n": 6,
+            "exact_match": 0.3333333333333333,
+            "category_accuracy": 1.0
+          },
+          "ocr_heavy": {
+            "n": 37,
+            "exact_match": 0.21621621621621623,
+            "category_accuracy": 0.8648648648648649
+          },
+          "ocr_light": {
+            "n": 82,
+            "exact_match": 0.4878048780487805,
+            "category_accuracy": 0.8414634146341463
+          },
+          "owner_home": {
+            "n": 18,
+            "exact_match": 0.2222222222222222,
+            "category_accuracy": 0.4444444444444444
+          },
+          "recharge_negated": {
+            "n": 39,
+            "exact_match": 0.38461538461538464,
+            "category_accuracy": 0.7948717948717948
+          },
+          "repair_vs_improvement": {
+            "n": 24,
+            "exact_match": 0.4166666666666667,
+            "category_accuracy": 0.9166666666666666
+          },
+          "withholding": {
+            "n": 9,
+            "exact_match": 0.4444444444444444,
+            "category_accuracy": 1.0
+          }
+        },
+        "layouts": {
+          "columns": {
+            "n": 61,
+            "exact_match": 0.08196721311475409,
+            "category_accuracy": 0.7868852459016393
+          },
+          "dotted": {
+            "n": 78,
+            "exact_match": 0.7307692307692307,
+            "category_accuracy": 0.9358974358974359
+          },
+          "letter": {
+            "n": 84,
+            "exact_match": 0.5952380952380952,
+            "category_accuracy": 0.8690476190476191
+          },
+          "note": {
+            "n": 77,
+            "exact_match": 0.2857142857142857,
+            "category_accuracy": 0.935064935064935
+          }
+        },
+        "confusion": [
+          [
+            37,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            32,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            33,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            28,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            0,
+            1,
+            1,
+            0,
+            0,
+            22,
+            0,
+            3,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            22,
+            0,
+            1
+          ],
+          [
+            1,
+            3,
+            7,
+            0,
+            0,
+            0,
+            5,
+            0,
+            30,
+            1
+          ]
+        ],
+        "errors": [
+          "invalid JSON: Expecting ',' delimiter",
+          "no JSON object found",
+          "schema: date: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'"
+        ]
+      },
+      "hard": {
+        "contender": "qwen0.5b-lora",
+        "split": "hard",
+        "n": 200,
+        "json_valid": 0.965,
+        "category_accuracy": 0.69,
+        "macro_f1": 0.697399737595816,
+        "exact_match": 0.035,
+        "field_accuracy": {
+          "vendor": 0.51,
+          "date": 0.65,
+          "base": 0.45,
+          "vat": 0.695,
+          "total": 0.645,
+          "period_start": 0.815,
+          "period_end": 0.84,
+          "recharged_to_tenant": 0.855
+        },
+        "mean_field_accuracy": 0.6825,
+        "ci": {
+          "macro_f1": [
+            0.6307990041418128,
+            0.7545070958001662
+          ],
+          "exact_match": [
+            0.01,
+            0.06
+          ],
+          "json_valid": [
+            0.94,
+            0.99
+          ],
+          "mean_field_accuracy": [
+            0.653109375,
+            0.71125
+          ]
+        },
+        "latency_p50_s": 0.7255,
+        "latency_p95_s": 0.7796099999999999,
+        "latency_mean_s": 0.7092735,
+        "prompt_tokens_mean": 183.625,
+        "gen_tokens_mean": 101.935,
+        "gen_tps_median": 163.1,
+        "retried": 0,
+        "peak_memory_gb": 0.572,
+        "load_seconds": 0.52,
+        "hours_per_1k_docs": 0.19702041666666667,
+        "kwh_per_1k_docs": 0.0039404083333333334,
+        "eur_per_1k_docs_local": 0.0007092735,
+        "slices": {
+          "distractor_amount": {
+            "n": 116,
+            "exact_match": 0.034482758620689655,
+            "category_accuracy": 0.6637931034482759
+          },
+          "injection": {
+            "n": 68,
+            "exact_match": 0.058823529411764705,
+            "category_accuracy": 0.5735294117647058
+          },
+          "misleading_vendor": {
+            "n": 5,
+            "exact_match": 0.0,
+            "category_accuracy": 1.0
+          },
+          "ocr_heavy": {
+            "n": 200,
+            "exact_match": 0.035,
+            "category_accuracy": 0.69
+          },
+          "owner_home": {
+            "n": 13,
+            "exact_match": 0.07692307692307693,
+            "category_accuracy": 0.23076923076923078
+          },
+          "recharge_negated": {
+            "n": 46,
+            "exact_match": 0.06521739130434782,
+            "category_accuracy": 0.6739130434782609
+          },
+          "repair_vs_improvement": {
+            "n": 41,
+            "exact_match": 0.0,
+            "category_accuracy": 0.7073170731707317
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.0,
+            "category_accuracy": 0.7142857142857143
+          }
+        },
+        "layouts": {
+          "csv": {
+            "n": 108,
+            "exact_match": 0.009259259259259259,
+            "category_accuracy": 0.7870370370370371
+          },
+          "scan": {
+            "n": 92,
+            "exact_match": 0.06521739130434782,
+            "category_accuracy": 0.5760869565217391
+          }
+        },
+        "confusion": [
+          [
+            23,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            1,
+            14,
+            0,
+            1,
+            0,
+            1,
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            17,
+            0,
+            0,
+            0,
+            3,
+            6,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            16,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            1,
+            20,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            13,
+            0,
+            1,
+            0,
+            0,
+            0,
+            11,
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            15,
+            1,
+            0
+          ],
+          [
+            1,
+            3,
+            6,
+            1,
+            0,
+            0,
+            1,
+            0,
+            7,
+            0
+          ]
+        ],
+        "errors": [
+          "invalid JSON: Expecting ',' delimiter",
+          "no JSON object found",
+          "schema: date: String should match pattern '^\\d{4}-\\d{2}-\\d{2}$'"
+        ]
+      }
+    },
+    "qwen1.5b-lora": {
+      "dev": {
+        "contender": "qwen1.5b-lora",
+        "split": "dev",
+        "n": 120,
+        "json_valid": 1.0,
+        "category_accuracy": 1.0,
+        "macro_f1": 1.0,
+        "exact_match": 0.975,
+        "field_accuracy": {
+          "vendor": 1.0,
+          "date": 1.0,
+          "base": 1.0,
+          "vat": 1.0,
+          "total": 1.0,
+          "period_start": 0.975,
+          "period_end": 0.9833333333333333,
+          "recharged_to_tenant": 1.0
+        },
+        "mean_field_accuracy": 0.9947916666666666,
+        "ci": {
+          "macro_f1": [
+            1.0,
+            1.0
+          ],
+          "exact_match": [
+            0.9416666666666667,
+            1.0
+          ],
+          "json_valid": [
+            1.0,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.9885416666666667,
+            1.0
+          ]
+        },
+        "latency_p50_s": 1.74295,
+        "latency_p95_s": 1.9392449999999999,
+        "latency_mean_s": 1.7070116666666668,
+        "prompt_tokens_mean": 181.78333333333333,
+        "gen_tokens_mean": 102.225,
+        "gen_tps_median": 72.1,
+        "retried": 0,
+        "peak_memory_gb": 1.356,
+        "load_seconds": 0.7,
+        "hours_per_1k_docs": 0.47416990740740744,
+        "kwh_per_1k_docs": 0.009483398148148149,
+        "eur_per_1k_docs_local": 0.0017070116666666668,
+        "slices": {
+          "clean": {
+            "n": 39,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "distractor_amount": {
+            "n": 18,
+            "exact_match": 0.8888888888888888,
+            "category_accuracy": 1.0
+          },
+          "injection": {
+            "n": 13,
+            "exact_match": 0.9230769230769231,
+            "category_accuracy": 1.0
+          },
+          "misleading_vendor": {
+            "n": 1,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "ocr_heavy": {
+            "n": 19,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "ocr_light": {
+            "n": 30,
+            "exact_match": 0.9666666666666667,
+            "category_accuracy": 1.0
+          },
+          "owner_home": {
+            "n": 3,
+            "exact_match": 0.6666666666666666,
+            "category_accuracy": 1.0
+          },
+          "recharge_negated": {
+            "n": 21,
+            "exact_match": 0.9523809523809523,
+            "category_accuracy": 1.0
+          },
+          "repair_vs_improvement": {
+            "n": 6,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          }
+        },
+        "layouts": {
+          "bank": {
+            "n": 24,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "email": {
+            "n": 32,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "invoice": {
+            "n": 29,
+            "exact_match": 0.9655172413793104,
+            "category_accuracy": 1.0
+          },
+          "keyvalue": {
+            "n": 16,
+            "exact_match": 1.0,
+            "category_accuracy": 1.0
+          },
+          "ticket": {
+            "n": 19,
+            "exact_match": 0.8947368421052632,
+            "category_accuracy": 1.0
+          }
+        },
+        "confusion": [
+          [
+            13,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            15,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            16,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            14,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            14,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            7,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            15,
+            0
+          ]
+        ],
+        "errors": []
+      },
+      "test": {
+        "contender": "qwen1.5b-lora",
+        "split": "test",
+        "n": 300,
+        "json_valid": 1.0,
+        "category_accuracy": 0.88,
+        "macro_f1": 0.8819288490320275,
+        "exact_match": 0.5466666666666666,
+        "field_accuracy": {
+          "vendor": 0.84,
+          "date": 0.9066666666666666,
+          "base": 0.9033333333333333,
+          "vat": 0.8733333333333333,
+          "total": 0.97,
+          "period_start": 0.9866666666666667,
+          "period_end": 0.9866666666666667,
+          "recharged_to_tenant": 0.99
+        },
+        "mean_field_accuracy": 0.9320833333333334,
+        "ci": {
+          "macro_f1": [
+            0.8454169354574231,
+            0.9148836044380215
+          ],
+          "exact_match": [
+            0.49,
+            0.6033333333333334
+          ],
+          "json_valid": [
+            1.0,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.92125,
+            0.9420833333333334
+          ]
+        },
+        "latency_p50_s": 1.7416,
+        "latency_p95_s": 1.94742,
+        "latency_mean_s": 1.7201939999999998,
+        "prompt_tokens_mean": 172.14333333333335,
+        "gen_tokens_mean": 101.49,
+        "gen_tps_median": 71.0,
+        "retried": 0,
+        "peak_memory_gb": 1.372,
+        "load_seconds": 0.68,
+        "hours_per_1k_docs": 0.4778316666666666,
+        "kwh_per_1k_docs": 0.009556633333333332,
+        "eur_per_1k_docs_local": 0.0017201939999999995,
+        "slices": {
+          "clean": {
+            "n": 86,
+            "exact_match": 0.5930232558139535,
+            "category_accuracy": 0.9186046511627907
+          },
+          "distractor_amount": {
+            "n": 62,
+            "exact_match": 0.5161290322580645,
+            "category_accuracy": 0.9032258064516129
+          },
+          "injection": {
+            "n": 27,
+            "exact_match": 0.48148148148148145,
+            "category_accuracy": 0.8888888888888888
+          },
+          "misleading_vendor": {
+            "n": 6,
+            "exact_match": 0.6666666666666666,
+            "category_accuracy": 1.0
+          },
+          "ocr_heavy": {
+            "n": 37,
+            "exact_match": 0.35135135135135137,
+            "category_accuracy": 0.918918918918919
+          },
+          "ocr_light": {
+            "n": 82,
+            "exact_match": 0.6219512195121951,
+            "category_accuracy": 0.8780487804878049
+          },
+          "owner_home": {
+            "n": 18,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 39,
+            "exact_match": 0.46153846153846156,
+            "category_accuracy": 0.8205128205128205
+          },
+          "repair_vs_improvement": {
+            "n": 24,
+            "exact_match": 0.75,
+            "category_accuracy": 0.9583333333333334
+          },
+          "withholding": {
+            "n": 9,
+            "exact_match": 0.6666666666666666,
+            "category_accuracy": 1.0
+          }
+        },
+        "layouts": {
+          "columns": {
+            "n": 61,
+            "exact_match": 0.16393442622950818,
+            "category_accuracy": 0.9180327868852459
+          },
+          "dotted": {
+            "n": 78,
+            "exact_match": 0.6923076923076923,
+            "category_accuracy": 0.8974358974358975
+          },
+          "letter": {
+            "n": 84,
+            "exact_match": 0.6547619047619048,
+            "category_accuracy": 0.8452380952380952
+          },
+          "note": {
+            "n": 77,
+            "exact_match": 0.5844155844155844,
+            "category_accuracy": 0.8701298701298701
+          }
+        },
+        "confusion": [
+          [
+            39,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            33,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            22,
+            0,
+            2,
+            0,
+            7,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            33,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            29,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            30,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            21,
+            1,
+            0
+          ],
+          [
+            0,
+            11,
+            7,
+            1,
+            0,
+            0,
+            1,
+            0,
+            27,
+            0
+          ]
+        ],
+        "errors": []
+      },
+      "hard": {
+        "contender": "qwen1.5b-lora",
+        "split": "hard",
+        "n": 200,
+        "json_valid": 0.985,
+        "category_accuracy": 0.86,
+        "macro_f1": 0.8402393319596024,
+        "exact_match": 0.365,
+        "field_accuracy": {
+          "vendor": 0.635,
+          "date": 0.865,
+          "base": 0.895,
+          "vat": 0.72,
+          "total": 0.925,
+          "period_start": 0.945,
+          "period_end": 0.93,
+          "recharged_to_tenant": 0.96
+        },
+        "mean_field_accuracy": 0.859375,
+        "ci": {
+          "macro_f1": [
+            0.7870699704183952,
+            0.8862418728325281
+          ],
+          "exact_match": [
+            0.295,
+            0.435
+          ],
+          "json_valid": [
+            0.965,
+            1.0
+          ],
+          "mean_field_accuracy": [
+            0.8325,
+            0.88375
+          ]
+        },
+        "latency_p50_s": 1.7497,
+        "latency_p95_s": 1.919665,
+        "latency_mean_s": 1.7211835000000002,
+        "prompt_tokens_mean": 183.625,
+        "gen_tokens_mean": 101.895,
+        "gen_tps_median": 71.0,
+        "retried": 0,
+        "peak_memory_gb": 1.369,
+        "load_seconds": 0.72,
+        "hours_per_1k_docs": 0.4781065277777778,
+        "kwh_per_1k_docs": 0.009562130555555557,
+        "eur_per_1k_docs_local": 0.0017211835000000002,
+        "slices": {
+          "distractor_amount": {
+            "n": 116,
+            "exact_match": 0.3706896551724138,
+            "category_accuracy": 0.896551724137931
+          },
+          "injection": {
+            "n": 68,
+            "exact_match": 0.4117647058823529,
+            "category_accuracy": 0.8235294117647058
+          },
+          "misleading_vendor": {
+            "n": 5,
+            "exact_match": 0.2,
+            "category_accuracy": 1.0
+          },
+          "ocr_heavy": {
+            "n": 200,
+            "exact_match": 0.365,
+            "category_accuracy": 0.86
+          },
+          "owner_home": {
+            "n": 13,
+            "exact_match": 0.0,
+            "category_accuracy": 0.0
+          },
+          "recharge_negated": {
+            "n": 46,
+            "exact_match": 0.391304347826087,
+            "category_accuracy": 0.8260869565217391
+          },
+          "repair_vs_improvement": {
+            "n": 41,
+            "exact_match": 0.34146341463414637,
+            "category_accuracy": 1.0
+          },
+          "withholding": {
+            "n": 7,
+            "exact_match": 0.2857142857142857,
+            "category_accuracy": 0.5714285714285714
+          }
+        },
+        "layouts": {
+          "csv": {
+            "n": 108,
+            "exact_match": 0.21296296296296297,
+            "category_accuracy": 0.8333333333333334
+          },
+          "scan": {
+            "n": 92,
+            "exact_match": 0.5434782608695652,
+            "category_accuracy": 0.8913043478260869
+          }
+        },
+        "confusion": [
+          [
+            23,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            18,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            13,
+            0,
+            0,
+            0,
+            2,
+            5,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            25,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            21,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            23,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            26,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            17,
+            1,
+            0
+          ],
+          [
+            0,
+            7,
+            4,
+            0,
+            0,
+            0,
+            0,
+            2,
+            6,
+            0
+          ]
+        ],
+        "errors": [
+          "invalid JSON: Expecting ',' delimiter",
+          "no JSON object found"
+        ]
+      }
+    }
+  },
+  "training": {
+    "qwen0.5b": {
+      "adapter": "qwen0.5b",
+      "selected_checkpoint": 400,
+      "selected_val_loss": 0.0026038202922791243,
+      "model": "mlx-community/Qwen2.5-0.5B-Instruct-4bit",
+      "train_seconds": 934.8,
+      "peak_memory_gb": 2.141,
+      "trained_tokens": 167112,
+      "adapter_mb": 11.75,
+      "hyperparameters": {
+        "fine_tune_type": "lora",
+        "optimizer": "adam",
+        "num_layers": 16,
+        "lora_parameters": {
+          "rank": 8,
+          "scale": 20.0,
+          "dropout": 0.05
+        },
+        "learning_rate": 0.0001,
+        "batch_size": 4,
+        "iters": 400,
+        "max_seq_length": 1024,
+        "mask_prompt": true,
+        "steps_per_report": 10,
+        "steps_per_eval": 50,
+        "val_batches": -1,
+        "save_every": 50,
+        "grad_checkpoint": true,
+        "seed": 13
+      },
+      "curves": {
+        "train": [
+          {
+            "iteration": 10,
+            "train_loss": 0.35935468673706056,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5356162488496671,
+            "tokens_per_second": 223.13772927077133,
+            "trained_tokens": 4166,
+            "peak_memory": 1.987257396
+          },
+          {
+            "iteration": 20,
+            "train_loss": 0.09383427500724792,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.4974098408199955,
+            "tokens_per_second": 206.42508394029815,
+            "trained_tokens": 8316,
+            "peak_memory": 2.12760854
+          },
+          {
+            "iteration": 30,
+            "train_loss": 0.068918776512146,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5262012714326542,
+            "tokens_per_second": 220.5835729845686,
+            "trained_tokens": 12508,
+            "peak_memory": 2.12760854
+          },
+          {
+            "iteration": 40,
+            "train_loss": 0.051508855819702146,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5617105627068292,
+            "tokens_per_second": 233.89627831112367,
+            "trained_tokens": 16672,
+            "peak_memory": 2.12760854
+          },
+          {
+            "iteration": 50,
+            "train_loss": 0.07432377338409424,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5763203608015136,
+            "tokens_per_second": 240.8442787789525,
+            "trained_tokens": 20851,
+            "peak_memory": 2.12760854
+          },
+          {
+            "iteration": 60,
+            "train_loss": 0.048095288872718814,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5721499503134517,
+            "tokens_per_second": 238.4148842956153,
+            "trained_tokens": 25018,
+            "peak_memory": 2.12760854
+          },
+          {
+            "iteration": 70,
+            "train_loss": 0.05682008266448975,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5736062758162371,
+            "tokens_per_second": 235.5800974777286,
+            "trained_tokens": 29125,
+            "peak_memory": 2.12760854
+          },
+          {
+            "iteration": 80,
+            "train_loss": 0.03213785290718078,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5674083401893326,
+            "tokens_per_second": 240.41091373822024,
+            "trained_tokens": 33362,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 90,
+            "train_loss": 0.016710908710956575,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5570986014123429,
+            "tokens_per_second": 230.08172238329763,
+            "trained_tokens": 37492,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 100,
+            "train_loss": 0.010300012677907944,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.576210562145978,
+            "tokens_per_second": 244.48614151853846,
+            "trained_tokens": 41735,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 110,
+            "train_loss": 0.013889099657535552,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5826287801635095,
+            "tokens_per_second": 242.54836118206902,
+            "trained_tokens": 45898,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 120,
+            "train_loss": 0.021994520723819733,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5764098186195887,
+            "tokens_per_second": 244.62832702215346,
+            "trained_tokens": 50142,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 130,
+            "train_loss": 0.018579739332199096,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5793957792875426,
+            "tokens_per_second": 245.54793126206056,
+            "trained_tokens": 54380,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 140,
+            "train_loss": 0.012281370908021927,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5751076417858053,
+            "tokens_per_second": 238.89971439782352,
+            "trained_tokens": 58534,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 150,
+            "train_loss": 0.0059153340756893154,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5643358811120462,
+            "tokens_per_second": 239.109112827174,
+            "trained_tokens": 62771,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 160,
+            "train_loss": 0.00915810912847519,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5770780112270333,
+            "tokens_per_second": 240.58382288055014,
+            "trained_tokens": 66940,
+            "peak_memory": 2.140768492
+          },
+          {
+            "iteration": 170,
+            "train_loss": 0.009867410361766814,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5565213842884363,
+            "tokens_per_second": 233.90593781642977,
+            "trained_tokens": 71143,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 180,
+            "train_loss": 0.008688283711671829,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5503826024897487,
+            "tokens_per_second": 230.28008088171086,
+            "trained_tokens": 75327,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 190,
+            "train_loss": 0.00971701294183731,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.583701386354304,
+            "tokens_per_second": 244.3957704665471,
+            "trained_tokens": 79514,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 200,
+            "train_loss": 0.0036331072449684145,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5058099299185167,
+            "tokens_per_second": 204.44837367306445,
+            "trained_tokens": 83556,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 210,
+            "train_loss": 0.003115127794444561,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5156010567760003,
+            "tokens_per_second": 216.65556405727534,
+            "trained_tokens": 87758,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 220,
+            "train_loss": 0.0027620192617177964,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.502992290675079,
+            "tokens_per_second": 211.45795899980322,
+            "trained_tokens": 91962,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 230,
+            "train_loss": 0.001253224816173315,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.4645530607082028,
+            "tokens_per_second": 198.78225467704,
+            "trained_tokens": 96241,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 240,
+            "train_loss": 0.006205888465046883,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5160220292907732,
+            "tokens_per_second": 215.4391972288978,
+            "trained_tokens": 100416,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 250,
+            "train_loss": 0.0019671274349093437,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5265490276078512,
+            "tokens_per_second": 218.78112097106214,
+            "trained_tokens": 104571,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 260,
+            "train_loss": 0.002156705409288406,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.522144634777783,
+            "tokens_per_second": 220.1883924857911,
+            "trained_tokens": 108788,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 270,
+            "train_loss": 0.006221558898687363,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5198867175597797,
+            "tokens_per_second": 220.1720248865667,
+            "trained_tokens": 113023,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 280,
+            "train_loss": 0.0032615929841995238,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5160020702617163,
+            "tokens_per_second": 213.3668560532197,
+            "trained_tokens": 117158,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 290,
+            "train_loss": 0.005936978012323379,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5361248724099164,
+            "tokens_per_second": 221.9020846904644,
+            "trained_tokens": 121297,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 300,
+            "train_loss": 0.0031729798763990404,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.532419104619469,
+            "tokens_per_second": 223.50954011925307,
+            "trained_tokens": 125495,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 310,
+            "train_loss": 0.0012342974543571473,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5288296472500504,
+            "tokens_per_second": 223.11322817479626,
+            "trained_tokens": 129714,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 320,
+            "train_loss": 0.0010417359881103039,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5377416991441791,
+            "tokens_per_second": 224.5071593926948,
+            "trained_tokens": 133889,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 330,
+            "train_loss": 0.0009823458269238472,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5371686770921297,
+            "tokens_per_second": 224.16048895054573,
+            "trained_tokens": 138062,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 340,
+            "train_loss": 0.0018512209877371787,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5506144106915464,
+            "tokens_per_second": 231.53335969579527,
+            "trained_tokens": 142267,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 350,
+            "train_loss": 0.0010581065900623799,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5471677475992512,
+            "tokens_per_second": 226.14443008277053,
+            "trained_tokens": 146400,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 360,
+            "train_loss": 0.000986233539879322,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5440089627815556,
+            "tokens_per_second": 223.9140890808883,
+            "trained_tokens": 150516,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 370,
+            "train_loss": 0.00186840258538723,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5424468257657262,
+            "tokens_per_second": 225.00694332762322,
+            "trained_tokens": 154664,
+            "peak_memory": 2.141100252
+          },
+          {
+            "iteration": 380,
+            "train_loss": 0.0004565998911857605,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5241360113060042,
+            "tokens_per_second": 220.24195195078295,
+            "trained_tokens": 158866,
+            "peak_memory": 2.141109964
+          },
+          {
+            "iteration": 390,
+            "train_loss": 0.00101105235517025,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5395635841409516,
+            "tokens_per_second": 219.8721605374378,
+            "trained_tokens": 162941,
+            "peak_memory": 2.141109964
+          },
+          {
+            "iteration": 400,
+            "train_loss": 0.00030303739476948975,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.5548722560813907,
+            "tokens_per_second": 231.43721801154803,
+            "trained_tokens": 167112,
+            "peak_memory": 2.141109964
+          }
+        ],
+        "val": [
+          {
+            "iteration": 0,
+            "val_loss": 1.492102026939392,
+            "val_time": 20.852479334000236
+          },
+          {
+            "iteration": 49,
+            "val_loss": 0.043335527181625366,
+            "val_time": 21.044172957997944
+          },
+          {
+            "iteration": 99,
+            "val_loss": 0.012849458493292332,
+            "val_time": 21.083309707999433
+          },
+          {
+            "iteration": 149,
+            "val_loss": 0.008808588609099388,
+            "val_time": 21.451161875000253
+          },
+          {
+            "iteration": 199,
+            "val_loss": 0.011261463165283203,
+            "val_time": 23.155534124998667
+          },
+          {
+            "iteration": 249,
+            "val_loss": 0.006256646476686001,
+            "val_time": 22.953289875000337
+          },
+          {
+            "iteration": 299,
+            "val_loss": 0.003334921319037676,
+            "val_time": 22.115293041999394
+          },
+          {
+            "iteration": 349,
+            "val_loss": 0.0036591237876564264,
+            "val_time": 21.965376999996806
+          },
+          {
+            "iteration": 399,
+            "val_loss": 0.0026038202922791243,
+            "val_time": 21.90829620799923
+          }
+        ]
+      }
+    },
+    "qwen1.5b": {
+      "adapter": "qwen1.5b",
+      "selected_checkpoint": 250,
+      "selected_val_loss": 0.002827334450557828,
+      "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+      "train_seconds": 4008.0,
+      "peak_memory_gb": 2.795,
+      "trained_tokens": 167112,
+      "adapter_mb": 21.13,
+      "hyperparameters": {
+        "fine_tune_type": "lora",
+        "optimizer": "adam",
+        "num_layers": 16,
+        "lora_parameters": {
+          "rank": 8,
+          "scale": 20.0,
+          "dropout": 0.05
+        },
+        "learning_rate": 0.0001,
+        "batch_size": 4,
+        "iters": 400,
+        "max_seq_length": 1024,
+        "mask_prompt": true,
+        "steps_per_report": 10,
+        "steps_per_eval": 50,
+        "val_batches": -1,
+        "save_every": 50,
+        "grad_checkpoint": true,
+        "seed": 13
+      },
+      "curves": {
+        "train": [
+          {
+            "iteration": 10,
+            "train_loss": 0.3040703535079956,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.1681812273853089,
+            "tokens_per_second": 70.06429932871968,
+            "trained_tokens": 4166,
+            "peak_memory": 2.647481204
+          },
+          {
+            "iteration": 20,
+            "train_loss": 0.040012282133102414,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16414900092627163,
+            "tokens_per_second": 68.12183538440271,
+            "trained_tokens": 8316,
+            "peak_memory": 2.77305158
+          },
+          {
+            "iteration": 30,
+            "train_loss": 0.036952897906303406,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16999219252581443,
+            "tokens_per_second": 71.2607271068214,
+            "trained_tokens": 12508,
+            "peak_memory": 2.77305158
+          },
+          {
+            "iteration": 40,
+            "train_loss": 0.026756617426872253,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16734094363544447,
+            "tokens_per_second": 69.68076892979907,
+            "trained_tokens": 16672,
+            "peak_memory": 2.77305158
+          },
+          {
+            "iteration": 50,
+            "train_loss": 0.02460198998451233,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16722858630333637,
+            "tokens_per_second": 69.88482621616426,
+            "trained_tokens": 20851,
+            "peak_memory": 2.77305158
+          },
+          {
+            "iteration": 60,
+            "train_loss": 0.02454746514558792,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16582084448344908,
+            "tokens_per_second": 69.09754589625324,
+            "trained_tokens": 25018,
+            "peak_memory": 2.77305158
+          },
+          {
+            "iteration": 70,
+            "train_loss": 0.01248636469244957,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16657783001860957,
+            "tokens_per_second": 68.41351478864296,
+            "trained_tokens": 29125,
+            "peak_memory": 2.77305158
+          },
+          {
+            "iteration": 80,
+            "train_loss": 0.010106956958770752,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16735666086359416,
+            "tokens_per_second": 70.90901720790484,
+            "trained_tokens": 33362,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 90,
+            "train_loss": 0.015531390905380249,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.1652899213413982,
+            "tokens_per_second": 68.26473751399746,
+            "trained_tokens": 37492,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 100,
+            "train_loss": 0.0059660360217094425,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.17096905679065424,
+            "tokens_per_second": 72.54217079627459,
+            "trained_tokens": 41735,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 110,
+            "train_loss": 0.006158316507935524,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.18291541573669154,
+            "tokens_per_second": 76.14768757118469,
+            "trained_tokens": 45898,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 120,
+            "train_loss": 0.008642986416816711,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.18925935869849753,
+            "tokens_per_second": 80.32167183164235,
+            "trained_tokens": 50142,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 130,
+            "train_loss": 0.0030484484508633614,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.1918472151763252,
+            "tokens_per_second": 81.30484979172661,
+            "trained_tokens": 54380,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 140,
+            "train_loss": 0.004485665261745453,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.1801762210366,
+            "tokens_per_second": 74.84520221860365,
+            "trained_tokens": 58534,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 150,
+            "train_loss": 0.0038879960775375366,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.18586330659882366,
+            "tokens_per_second": 78.75028300592159,
+            "trained_tokens": 62771,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 160,
+            "train_loss": 0.004871192201972008,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.1895988825859019,
+            "tokens_per_second": 79.0437741500625,
+            "trained_tokens": 66940,
+            "peak_memory": 2.794547388
+          },
+          {
+            "iteration": 170,
+            "train_loss": 0.0030131667852401735,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.18522082047052943,
+            "tokens_per_second": 77.84831084376353,
+            "trained_tokens": 71143,
+            "peak_memory": 2.79459654
+          },
+          {
+            "iteration": 180,
+            "train_loss": 0.00558340847492218,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.18730577781583604,
+            "tokens_per_second": 78.3687374381458,
+            "trained_tokens": 75327,
+            "peak_memory": 2.79459654
+          },
+          {
+            "iteration": 190,
+            "train_loss": 0.008224165439605713,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.19519216073141907,
+            "tokens_per_second": 81.72695769824517,
+            "trained_tokens": 79514,
+            "peak_memory": 2.79459654
+          },
+          {
+            "iteration": 200,
+            "train_loss": 0.0016005996614694596,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.1902084453695593,
+            "tokens_per_second": 76.88225361837587,
+            "trained_tokens": 83556,
+            "peak_memory": 2.79459654
+          },
+          {
+            "iteration": 210,
+            "train_loss": 0.0028893133625388146,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.17178296643990298,
+            "tokens_per_second": 72.18320249804724,
+            "trained_tokens": 87758,
+            "peak_memory": 2.79459654
+          },
+          {
+            "iteration": 220,
+            "train_loss": 0.002772524021565914,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.17459988984180544,
+            "tokens_per_second": 73.40179368949501,
+            "trained_tokens": 91962,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 230,
+            "train_loss": 0.0015935435891151427,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16922777318324642,
+            "tokens_per_second": 72.41256414511113,
+            "trained_tokens": 96241,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 240,
+            "train_loss": 0.0022846657782793047,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.1757587983040106,
+            "tokens_per_second": 73.37929829192441,
+            "trained_tokens": 100416,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 250,
+            "train_loss": 0.0025401515886187553,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.17676774443089077,
+            "tokens_per_second": 73.44699781103512,
+            "trained_tokens": 104571,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 260,
+            "train_loss": 0.0011345459148287772,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.16997270566768133,
+            "tokens_per_second": 71.67748998006121,
+            "trained_tokens": 108788,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 270,
+            "train_loss": 0.0031888801604509354,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.18435508359966887,
+            "tokens_per_second": 78.07437790445977,
+            "trained_tokens": 113023,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 280,
+            "train_loss": 0.0006267287768423557,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.0832317001155781,
+            "tokens_per_second": 34.41630799779154,
+            "trained_tokens": 117158,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 290,
+            "train_loss": 0.0011458834633231163,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.0785386596166425,
+            "tokens_per_second": 32.507151215328335,
+            "trained_tokens": 121297,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 300,
+            "train_loss": 0.00017154959496110678,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.07273893163271022,
+            "tokens_per_second": 30.53580349941175,
+            "trained_tokens": 125495,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 310,
+            "train_loss": 0.0003982775844633579,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.0742710898085984,
+            "tokens_per_second": 31.33497279024766,
+            "trained_tokens": 129714,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 320,
+            "train_loss": 0.0007127413526177406,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.07210053623822733,
+            "tokens_per_second": 30.101973879459916,
+            "trained_tokens": 133889,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 330,
+            "train_loss": 0.00019843610934913158,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.07332339994535023,
+            "tokens_per_second": 30.59785479719465,
+            "trained_tokens": 138062,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 340,
+            "train_loss": 0.0006345888134092093,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.07541426180547299,
+            "tokens_per_second": 31.711697089201394,
+            "trained_tokens": 142267,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 350,
+            "train_loss": 0.00042277378961443903,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.0758664929807257,
+            "tokens_per_second": 31.35562154893393,
+            "trained_tokens": 146400,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 360,
+            "train_loss": 0.0017100509256124496,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.07402456740242214,
+            "tokens_per_second": 30.46851194283695,
+            "trained_tokens": 150516,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 370,
+            "train_loss": 0.002851349301636219,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.0895266110446975,
+            "tokens_per_second": 37.135638261340524,
+            "trained_tokens": 154664,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 380,
+            "train_loss": 0.00551690049469471,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.07674139832840683,
+            "tokens_per_second": 32.24673557759655,
+            "trained_tokens": 158866,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 390,
+            "train_loss": 0.004793567955493927,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.07907530214036039,
+            "tokens_per_second": 32.22318562219686,
+            "trained_tokens": 162941,
+            "peak_memory": 2.794612924
+          },
+          {
+            "iteration": 400,
+            "train_loss": 0.0022132845595479013,
+            "learning_rate": 9.999999747378752e-05,
+            "iterations_per_second": 0.08286007161884106,
+            "tokens_per_second": 34.56093587221861,
+            "trained_tokens": 167112,
+            "peak_memory": 2.794612924
+          }
+        ],
+        "val": [
+          {
+            "iteration": 0,
+            "val_loss": 1.3967915773391724,
+            "val_time": 64.22268883300057
+          },
+          {
+            "iteration": 49,
+            "val_loss": 0.014771491289138794,
+            "val_time": 64.06109120800102
+          },
+          {
+            "iteration": 99,
+            "val_loss": 0.009093126282095909,
+            "val_time": 63.66775233299995
+          },
+          {
+            "iteration": 149,
+            "val_loss": 0.005876840557903051,
+            "val_time": 56.57099733300129
+          },
+          {
+            "iteration": 199,
+            "val_loss": 0.003401845693588257,
+            "val_time": 57.28317233300186
+          },
+          {
+            "iteration": 249,
+            "val_loss": 0.002827334450557828,
+            "val_time": 61.961367709001934
+          },
+          {
+            "iteration": 299,
+            "val_loss": 0.003375560510903597,
+            "val_time": 148.85191879199556
+          },
+          {
+            "iteration": 349,
+            "val_loss": 0.00426147086545825,
+            "val_time": 136.83976929100027
+          },
+          {
+            "iteration": 399,
+            "val_loss": 0.004046991001814604,
+            "val_time": 138.8564404580029
+          }
+        ]
+      }
+    }
+  },
+  "paired": [
+    {
+      "a": "qwen0.5b-lora",
+      "b": "qwen0.5b-fewshot",
+      "split": "test",
+      "n": 300,
+      "exact": [
+        0.4033333333333333,
+        0.3433333333333333,
+        0.4633333333333333
+      ],
+      "category_ok": [
+        0.73,
+        0.6733333333333333,
+        0.7833333333333333
+      ]
+    },
+    {
+      "a": "qwen0.5b-lora",
+      "b": "qwen0.5b-fewshot",
+      "split": "hard",
+      "n": 200,
+      "exact": [
+        -0.005,
+        -0.045,
+        0.035
+      ],
+      "category_ok": [
+        0.575,
+        0.494875,
+        0.655
+      ]
+    },
+    {
+      "a": "qwen1.5b-lora",
+      "b": "qwen1.5b-fewshot",
+      "split": "test",
+      "n": 300,
+      "exact": [
+        0.28,
+        0.21333333333333335,
+        0.35
+      ],
+      "category_ok": [
+        0.32666666666666666,
+        0.26666666666666666,
+        0.38674999999999954
+      ]
+    },
+    {
+      "a": "qwen1.5b-lora",
+      "b": "qwen1.5b-fewshot",
+      "split": "hard",
+      "n": 200,
+      "exact": [
+        0.24,
+        0.155,
+        0.325
+      ],
+      "category_ok": [
+        0.515,
+        0.435,
+        0.59
+      ]
+    },
+    {
+      "a": "qwen1.5b-lora",
+      "b": "qwen3b-fewshot",
+      "split": "test",
+      "n": 100,
+      "exact": [
+        0.07,
+        -0.05,
+        0.18
+      ],
+      "category_ok": [
+        0.19,
+        0.10975000000000001,
+        0.28
+      ]
+    },
+    {
+      "a": "qwen1.5b-lora",
+      "b": "qwen3b-fewshot",
+      "split": "hard",
+      "n": 100,
+      "exact": [
+        0.1,
+        -0.03,
+        0.23
+      ],
+      "category_ok": [
+        0.35,
+        0.25,
+        0.45
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+# evalsmith suite: gate a prompt or adapter change on the lora-vs-prompt test set.
+# Paths are relative to this file. Put the new outputs in outputs/ and point candidate at them;
+# any case that passed on the baseline and fails on the candidate fails the run.
+name: lora-vs-prompt-test
+
+prompts:
+  golden: golden.json
+  baseline: outputs/qwen1.5b-lora.json
+  candidate: outputs/qwen1.5b-lora.json
+  judge:
+    enabled: false
+
+gates:
+  prompt_pass_rate: 0.43

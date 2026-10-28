@@ -1,0 +1,8 @@
+{
+  "fingerprint": "4389ab8d3b6c1294",
+  "model": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "adapter": null,
+  "docs": 300,
+  "load_seconds": 1.06,
+  "peak_memory_gb": 1.516
+}

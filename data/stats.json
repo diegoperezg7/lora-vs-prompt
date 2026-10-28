@@ -1,0 +1,143 @@
+{
+  "train": {
+    "docs": 800,
+    "layouts": {
+      "email": 170,
+      "keyvalue": 166,
+      "ticket": 141,
+      "invoice": 156,
+      "bank": 167
+    },
+    "categories": {
+      "non_deductible": 98,
+      "utilities": 86,
+      "mortgage_interest": 87,
+      "property_tax": 85,
+      "community_fees": 88,
+      "insurance": 92,
+      "repairs_maintenance": 104,
+      "improvement": 82,
+      "professional_services": 78
+    },
+    "tags": {
+      "owner_home": 51,
+      "recharge_negated": 109,
+      "injection": 68,
+      "distractor_amount": 174,
+      "ocr_heavy": 123,
+      "ocr_light": 203,
+      "repair_vs_improvement": 68,
+      "misleading_vendor": 28,
+      "withholding": 42
+    }
+  },
+  "dev": {
+    "docs": 120,
+    "layouts": {
+      "ticket": 19,
+      "invoice": 29,
+      "keyvalue": 16,
+      "bank": 24,
+      "email": 32
+    },
+    "categories": {
+      "community_fees": 13,
+      "mortgage_interest": 14,
+      "utilities": 15,
+      "non_deductible": 15,
+      "professional_services": 13,
+      "insurance": 14,
+      "repairs_maintenance": 13,
+      "improvement": 7,
+      "property_tax": 16
+    },
+    "tags": {
+      "ocr_heavy": 19,
+      "ocr_light": 30,
+      "owner_home": 3,
+      "recharge_negated": 21,
+      "distractor_amount": 18,
+      "withholding": 7,
+      "injection": 13,
+      "repair_vs_improvement": 6,
+      "misleading_vendor": 1
+    },
+    "ngram_overlap_with_train": {
+      "n": 6,
+      "mean": 0.2494,
+      "p90": 0.4118,
+      "max": 0.5435
+    }
+  },
+  "test": {
+    "docs": 300,
+    "layouts": {
+      "columns": 61,
+      "letter": 84,
+      "dotted": 78,
+      "note": 77
+    },
+    "categories": {
+      "non_deductible": 47,
+      "repairs_maintenance": 39,
+      "property_tax": 33,
+      "improvement": 32,
+      "mortgage_interest": 30,
+      "professional_services": 25,
+      "utilities": 33,
+      "community_fees": 32,
+      "insurance": 29
+    },
+    "tags": {
+      "owner_home": 18,
+      "recharge_negated": 39,
+      "ocr_light": 82,
+      "injection": 27,
+      "distractor_amount": 62,
+      "ocr_heavy": 37,
+      "repair_vs_improvement": 24,
+      "misleading_vendor": 6,
+      "withholding": 9
+    },
+    "ngram_overlap_with_train": {
+      "n": 6,
+      "mean": 0.0185,
+      "p90": 0.0698,
+      "max": 0.2195
+    }
+  },
+  "hard": {
+    "docs": 200,
+    "layouts": {
+      "csv": 108,
+      "scan": 92
+    },
+    "categories": {
+      "community_fees": 21,
+      "improvement": 27,
+      "mortgage_interest": 24,
+      "repairs_maintenance": 23,
+      "insurance": 22,
+      "non_deductible": 19,
+      "professional_services": 20,
+      "utilities": 18,
+      "property_tax": 26
+    },
+    "tags": {
+      "ocr_heavy": 200,
+      "injection": 68,
+      "repair_vs_improvement": 41,
+      "distractor_amount": 116,
+      "recharge_negated": 46,
+      "withholding": 7,
+      "owner_home": 13,
+      "misleading_vendor": 5
+    },
+    "ngram_overlap_with_train": {
+      "n": 6,
+      "mean": 0.009,
+      "p90": 0.0526,
+      "max": 0.1429
+    }
+  }
+}
